@@ -8,7 +8,7 @@ Run the installer, and follow the on-screen instructions.
 
 Now open WSL and type `code` to launch VS Code. For the first time, it will ask you to install the Remote - WSL extension. Click on the Install button and wait for the installation to complete.
 
-![VS Code Remote - WSL extension](/images/vscode-remote-wsl.png.png)
+![VS Code Remote - WSL extension](vscode-remote-wsl.png.png)
 
 You will need two more extensions for Python development:
 
