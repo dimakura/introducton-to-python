@@ -190,9 +190,31 @@ conda 23.3.1 # your version might be different
 Python 3.11.3 # your version might be different
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installing-vs-code"><a class="header" href="#installing-vs-code">Installing VS Code</a></h1>
+<p>Visual Studio Code (VS Code) is a free and open-source code editor developed by Microsoft.</p>
+<p>To install it on your system open the <a href="https://code.visualstudio.com/">VS Code home page</a> and download the installer for your operating system (we assume, it's Windows 11).</p>
+<p>Run the installer, and follow the on-screen instructions.</p>
+<p>Now open WSL and type <code>code</code> to launch VS Code. For the first time, it will ask you to install the Remote - WSL extension. Click on the Install button and wait for the installation to complete.</p>
+<p><img src="01-getting-started//images/vscode-remote-wsl.png.png" alt="VS Code Remote - WSL extension" /></p>
+<p>You will need two more extensions for Python development:</p>
+<ol>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> for syntax highlighting and code completion;</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a> for interactive notebooks.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">Hello World</a></h1>
-<pre><code class="language-py">print(&quot;Hello world!&quot;)
+<p>Create a new directory called <code>pyintro</code> and open it in VS Code.</p>
+<pre><code class="language-bash">$ mkdir pyintro # create a project directory
+$ cd pyintro    # change the current directory
+$ code .        # open VS Code
 </code></pre>
+<p>Create a new file called <code>hello_world.py</code> and add the following code:</p>
+<pre><code class="language-py">print(&quot;Hello, World!&quot;)
+</code></pre>
+<p>To execute this code, run the following command in the terminal:</p>
+<pre><code class="language-bash">$ conda activate pyintro # make sure you are in the right environment
+$ python hello_world.py  # run the script
+</code></pre>
+<p>This should print <code>Hello, World!</code> to the terminal.</p>
+<p>Congratulations, you have just written your first Python program!</p>
 
                     </main>
 
