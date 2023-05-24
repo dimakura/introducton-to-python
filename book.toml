@@ -1,0 +1,6 @@
+[book]
+authors = ["Dimitri Kurashvili"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Introduction to Python"
