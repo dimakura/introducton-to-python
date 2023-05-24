@@ -1,3 +1,5 @@
+# Based on
+# https://github.com/rust-lang/mdBook/wiki/Automated-Deployment%3A-GitHub-Actions#jamesivesgithub-pages-deploy-action
 name: CI
 
 on:
