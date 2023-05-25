@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-getting-started/intro.html"><strong aria-hidden="true">1.</strong> Getting started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="01-getting-started/python.html"><strong aria-hidden="true">1.1.</strong> Installing Python</a></li><li class="chapter-item expanded "><a href="01-getting-started/vscode.html"><strong aria-hidden="true">1.2.</strong> Installing VS Code</a></li><li class="chapter-item expanded "><a href="01-getting-started/hello-world.html"><strong aria-hidden="true">1.3.</strong> Hello World</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="getting-started/intro.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/python.html"><strong aria-hidden="true">1.1.</strong> Installing Python</a></li><li class="chapter-item expanded "><a href="getting-started/vscode.html"><strong aria-hidden="true">1.2.</strong> Installing VS Code</a></li><li class="chapter-item expanded "><a href="getting-started/hello-world.html"><strong aria-hidden="true">1.3.</strong> Hello World</a></li></ol></li><li class="chapter-item expanded "><a href="variables-and-types/intro.html"><strong aria-hidden="true">2.</strong> Variables and Simple Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="variables-and-types/variables.html"><strong aria-hidden="true">2.1.</strong> Variables</a></li><li class="chapter-item expanded "><a href="variables-and-types/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li><li class="chapter-item expanded "><a href="variables-and-types/numbers.html"><strong aria-hidden="true">2.3.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="variables-and-types/type-checking.html"><strong aria-hidden="true">2.4.</strong> Checking Variable Types</a></li><li class="chapter-item expanded "><a href="variables-and-types/comments.html"><strong aria-hidden="true">2.5.</strong> Comments</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,11 +145,12 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="getting-started"><a class="header" href="#getting-started">Getting started</a></h1>
+                        <h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
+<p>In this lecture we will:</p>
 <ol>
-<li><a href="01-getting-started/./python.html">Install Python</a> on Windows using WSL;</li>
-<li><a href="01-getting-started/./vscode.html">Install VS Code</a> on Windows;</li>
-<li><a href="01-getting-started/./hello-world.html">Hello world</a> in Python.</li>
+<li><a href="getting-started/./python.html">Install Python</a> on Windows using WSL;</li>
+<li><a href="getting-started/./vscode.html">Install VS Code</a> on Windows;</li>
+<li><a href="getting-started/./hello-world.html">Write our first program</a> in Python.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installing-python"><a class="header" href="#installing-python">Installing Python</a></h1>
 <p>There are many possible ways to install Python on your system.
@@ -179,42 +180,269 @@ conda 23.3.1 # your version might be different
 </code></pre>
 <h2 id="prepare-your-environment"><a class="header" href="#prepare-your-environment">Prepare your environment</a></h2>
 <p>It's usual for Python developers to create a virtual environment for each project. This allows you to install different versions of Python and packages for each project.</p>
-<p>For this course, we will create a virtual environment called <code>pyinto</code>:</p>
-<pre><code class="language-sh">$ conda create -n pyinto python=3.11
+<p>For this course, we will create a virtual environment called <code>pyintro</code>:</p>
+<pre><code class="language-sh">$ conda create -n pyintro python=3.11
 </code></pre>
 <p>When you need to use this environment, you can activate it with:</p>
-<pre><code class="language-sh">$ conda activate pyinto
+<pre><code class="language-sh">$ conda activate pyintro
 </code></pre>
 <p>You can check it with:</p>
 <pre><code class="language-sh">$ python --version
 Python 3.11.3 # your version might be different
 </code></pre>
+<p>You can also start Python shell with:</p>
+<pre><code class="language-sh">$ python
+</code></pre>
+<p>it will display the version and a prompt <code>&gt;&gt;&gt;</code> where you can type Python commands.</p>
+<pre><code class="language-sh">Python 3.11.3
+&gt;&gt;&gt; print(1 + 1)
+2
+</code></pre>
+<p>To exit the shell, type <code>exit()</code> or press <code>Ctrl+D</code>.</p>
+<blockquote>
+<h3 id="ipython"><a class="header" href="#ipython">IPython</a></h3>
+<p>A more advanced Python shell is <a href="https://ipython.org/">IPython</a>. You can install it with:</p>
+<pre><code class="language-sh">$ conda install ipython
+</code></pre>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installing-vs-code"><a class="header" href="#installing-vs-code">Installing VS Code</a></h1>
 <p>Visual Studio Code (VS Code) is a free and open-source code editor developed by Microsoft.</p>
 <p>To install it on your system open the <a href="https://code.visualstudio.com/">VS Code home page</a> and download the installer for your operating system (we assume, it's Windows 11).</p>
 <p>Run the installer, and follow the on-screen instructions.</p>
 <p>Now open WSL and type <code>code</code> to launch VS Code. For the first time, it will ask you to install the Remote - WSL extension. Click on the Install button and wait for the installation to complete.</p>
-<p><img src="01-getting-started/vscode-remote-wsl.png.png" alt="VS Code Remote - WSL extension" /></p>
-<p>You will need two more extensions for Python development:</p>
-<ol>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> for syntax highlighting and code completion;</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a> for interactive notebooks.</li>
-</ol>
+<p><img src="getting-started/vscode-remote-wsl.png.png" alt="VS Code Remote - WSL extension" /></p>
+<p>You will need one more extension for Python development. It's called <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> and is useful for syntax highlighting and code completion.</p>
+<p>One more extension that you might find useful is <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a>. It allows you to run Jupyter notebooks inside VS Code. We won't explicitly use it in this course, but you might find it useful in your own explorations.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">Hello World</a></h1>
 <p>Create a new directory called <code>pyintro</code> and open it in VS Code.</p>
-<pre><code class="language-bash">$ mkdir pyintro # create a project directory
+<pre><code class="language-bash">$ cd ~          # go to your home directory
+$ mkdir pyintro # create a project directory
 $ cd pyintro    # change the current directory
 $ code .        # open VS Code
 </code></pre>
-<p>Create a new file called <code>hello_world.py</code> and add the following code:</p>
+<p>Create a new file called and add the following code:</p>
+<p>File: <code>hello_world.py</code></p>
 <pre><code class="language-py">print(&quot;Hello, World!&quot;)
 </code></pre>
 <p>To execute this code, run the following command in the terminal:</p>
 <pre><code class="language-bash">$ conda activate pyintro # make sure you are in the right environment
 $ python hello_world.py  # run the script
 </code></pre>
-<p>This should print <code>Hello, World!</code> to the terminal.</p>
+<p>This should print</p>
+<pre><code class="language-txt">Hello, World!
+</code></pre>
+<p>to the terminal.</p>
 <p>Congratulations, you have just written your first Python program!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variables-and-simple-data-types"><a class="header" href="#variables-and-simple-data-types">Variables and Simple Data Types</a></h1>
+<p>In this lecture, you will learn about variables and simple data types in Python.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<p>In the previous lecture we wrote a simple program that printed a message to the screen.</p>
+<p>Here's an equivalent program:</p>
+<p>File: <code>hello-world.py</code></p>
+<pre><code class="language-py">message = &quot;Hello, World!&quot;
+print(message)
+</code></pre>
+<p>We can run this program by typing <code>python hello-world.py</code> in the terminal. As before, the program will print the message <code>&quot;Hello, World!&quot;</code> to the screen.</p>
+<blockquote>
+<p><strong>Note</strong>: Miniconda environment, <code>pyintro</code>, should be activated before running the program.</p>
+<pre><code class="language-bash">$ conda activate pyintro
+</code></pre>
+<p>This will be our default way of running Python programs in this book.
+And we won't remind you about it in the future.</p>
+</blockquote>
+<p>Back to the program. The first line of the program declares a variable.</p>
+<pre><code class="language-py">message = &quot;Hello, World!&quot;
+</code></pre>
+<p>In Python, variables are created when you assign a value to them using the <code>=</code> operator. In this case, we assign the message <code>&quot;Hello, World!&quot;</code> to the variable <code>message</code>.</p>
+<p>Variable has a name and a value. In this case, the name of the variable is <code>message</code> and the value is <code>&quot;Hello, World!&quot;</code>. You can think of variables as containers for storing data. We can later use the variable to access the data stored in it, by its name. Like we do on the second line:</p>
+<pre><code class="language-py">print(message)
+</code></pre>
+<h2 id="type-annotation"><a class="header" href="#type-annotation">Type annotation</a></h2>
+<p>One important propery of a variable, which might not be obvious from the example above, is its <em>type</em>. In this case, the type of the variable is <code>str</code>, which is short for <em>string</em>. To make this more explicit, we could have declared the variable in the following way:</p>
+<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
+</code></pre>
+<p>(note the <code>: str</code> part after variable name).</p>
+<p>This is called <em>type annotation</em>. It is not necessary in this case, because Python can infer the type of the variable from the value assigned to it. However, it is a good practice to use type annotations in your programs.</p>
+<p>In the rest of the book, we will use type annotations in all examples. Though, you can omit them at the beginning, if you find them confusing.</p>
+<p>The rest of the program is the same as before:</p>
+<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
+print(message)
+</code></pre>
+<p>with the same output</p>
+<pre><code class="language-txt">Hello, World!
+</code></pre>
+<blockquote>
+<h3 id="exercise"><a class="header" href="#exercise">Exercise</a></h3>
+<p>Try to change the program above a bit further.
+Declare a variable <code>name</code> and assign your name to it, for example <code>&quot;Bill&quot;</code>.
+Then print a message that says <code>&quot;Hello, Bill!&quot;</code>, using the <code>name</code> variable.
+In the next section you'll learn how to write such a program, but try to figure it out yourself first.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
+<p>In previous section we declared a string variable <code>message</code> and printed it to the screen. </p>
+<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
+print(message)
+</code></pre>
+<p>What exactly is a string? A string is a sequence of characters. In the example above, the string <code>&quot;Hello, World!&quot;</code> consists of 13 characters: <code>H</code>, <code>e</code>, <code>l</code>, <code>l</code>, <code>o</code>, <code>,</code>, <code> </code>, <code>W</code>, <code>o</code>, <code>r</code>, <code>l</code>, <code>d</code>, <code>!</code>.</p>
+<p>Strings are one of the most common data types that you'll encounter in Python programs. You can use them to represent names, addresses, messages, and many other kinds of information.</p>
+<p>Strings are easy to recognize in Python programs. They are enclosed in single or double quotes. In previous example we used double quotes, but single quotes are also valid:</p>
+<pre><code class="language-py">message1: str = &quot;Hello, World!&quot;
+message2: str = 'Hello, World!'
+assert message1 == message2 # make sure they are equal
+</code></pre>
+<p>Both declarations are equivalent.</p>
+<p>You can use either single or double quotes, but you should be consistent. If you start a string with a single quote, you should end it with a single quote. If you start it with a double quote, you should end it with a double quote.</p>
+<p>It's possible to use single quotes inside a string that is enclosed in double quotes, and vice versa. For instance this program</p>
+<pre><code class="language-py">print('I said, &quot;Hello, World!&quot;')
+print(&quot;He said, 'Hello, Sarah!'&quot;)
+</code></pre>
+<p>produces the following output:</p>
+<pre><code class="language-txt">I said, &quot;Hello, World!&quot;
+He said, 'Hello, Sarah!'
+</code></pre>
+<p>It's also possible to use the same type of quotes inside a string, but you have to escape them with a backslash <code>\</code>, for instance:</p>
+<pre><code class="language-py">&quot;I said, \&quot;Hello, World!\&quot;&quot;
+</code></pre>
+<h2 id="some-useful-string-methods"><a class="header" href="#some-useful-string-methods">Some Useful String Methods</a></h2>
+<p>Python provides a number of useful methods for working with strings. A method is an action that Python can perform on a piece of data. The dot <code>.</code> after the name of the variable <code>name</code> in the following example tells Python to make the <code>upper()</code> method act on the variable.</p>
+<pre><code class="language-py">name: str = &quot;Linus Torvalds&quot;
+print(name.upper())
+</code></pre>
+<p>This program produces the following output:</p>
+<pre><code class="language-txt">LINUS TORVALDS
+</code></pre>
+<p>Similarly, the <code>lower()</code> method changes a string to all lowercase:</p>
+<pre><code class="language-py">name: str = &quot;Linus Torvalds&quot;
+print(name.lower())
+</code></pre>
+<p>with output</p>
+<pre><code class="language-txt">linus torvalds
+</code></pre>
+<p>One more method, which we'll use a lot in this book, is <code>title()</code>.
+It changes each word to title case, where each word begins with a capital letter:</p>
+<pre><code class="language-py">name: str = &quot;linus torvalds&quot;
+print(name.title())
+</code></pre>
+<p>which produces the following output:</p>
+<pre><code class="language-txt">Linus Torvalds
+</code></pre>
+<h2 id="string-formatting"><a class="header" href="#string-formatting">String Formatting</a></h2>
+<p>Very often you'll want to combine several strings, for example if you have <code>first_name</code> and <code>last_name</code> variables, you might want to combine them into a single string <code>full_name</code>. Python provides several ways to do this. In this section we'll look at the <code>f-string</code> method.</p>
+<p>Look at the following example:</p>
+<pre><code class="language-py">first_name: str = &quot;linus&quot;
+last_name: str = &quot;torvalds&quot;
+full_name: str = f&quot;{first_name} {last_name}&quot;
+print(full_name)
+</code></pre>
+<p>and its output:</p>
+<pre><code class="language-txt">linus torvalds
+</code></pre>
+<p>First two lines should be familiar to you, we declare two string variables
+for first and last names. The third line is more interesting</p>
+<pre><code class="language-py">full_name: str = f&quot;{first_name} {last_name}&quot;
+</code></pre>
+<p>Here, we initialize variable with an <em>f-string</em>. The <em>f</em> stands for <em>format</em>.
+An f-string is a string that has an <code>f</code> at the beginning and curly braces <code>{}</code> containing expressions that will be replaced with their values.</p>
+<p>We can place any valid Python expression inside the curly braces. For example, we can use the <code>title()</code> method to titleize a string:</p>
+<pre><code class="language-py">first_name: str = &quot;linus&quot;
+last_name: str = &quot;torvalds&quot;
+full_name: str = f&quot;{first_name} {last_name}&quot;
+print(f&quot;Hello, {full_name.title()}!&quot;)
+</code></pre>
+<p>which outputs a nicely formatted greeting:</p>
+<pre><code class="language-txt">Hello, Linus Torvalds!
+</code></pre>
+<h2 id="dealing-with-whitespaces"><a class="header" href="#dealing-with-whitespaces">Dealing with Whitespaces</a></h2>
+<p>Whitespace refers to any nonprinting character, such as spaces, tabs, and end-of-line symbols. You can use whitespace to organize your output so it's easier for users to read.</p>
+<p>A table below lists some of the whitespace characters:</p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Character</th></tr></thead><tbody>
+<tr><td>Space</td><td><code>' '</code></td></tr>
+<tr><td>Tab</td><td><code>'\t'</code></td></tr>
+<tr><td>Newline</td><td><code>'\n'</code></td></tr>
+</tbody></table>
+</div>
+<p>And here's an example of using tabs and newlines:</p>
+<pre><code class="language-py">print(&quot;Languages:\n\tPython\n\tC\n\tJavaScript&quot;)
+</code></pre>
+<p>and its output:</p>
+<pre><code class="language-txt">Languages:
+	Python
+	C
+	JavaScript
+</code></pre>
+<p>Quite often you'll want to strip whitespace from strings. For example, you might want to remove extra whitespace from the right side of a name before storing it. Python provides a number of methods for stripping whitespace from strings.</p>
+<p>The basic methods for removing excess whitespace are <code>rstrip()</code>, <code>lstrip()</code>, and <code>strip()</code>. The <code>lstrip()</code> method removes whitespace from the left side of a string, <code>rstrip()</code> removes whitespace from the right side, and <code>strip()</code> removes whitespace from both sides.</p>
+<p>Try to run the following program:</p>
+<pre><code class="language-py">favorite_language = ' python '
+
+print(f&quot;'{favorite_language}'&quot;)          # original string
+print(f&quot;'{favorite_language.rstrip()}'&quot;) # right strip
+print(f&quot;'{favorite_language.lstrip()}'&quot;) # left strip
+print(f&quot;'{favorite_language.strip()}'&quot;)  # strip both sides
+</code></pre>
+<p>and compare the output:</p>
+<pre><code class="language-txt">' python '
+' python'
+'python '
+'python'
+</code></pre>
+<h2 id="removing-prefixes"><a class="header" href="#removing-prefixes">Removing Prefixes</a></h2>
+<p>Another useful method is <code>removeprefix()</code>. It removes a prefix from a string. For example, if you have an url, you can remove ``</p>
+<pre><code class="language-py">url = 'https://dimakura.github.io'
+print(url.removeprefix('https://'))
+</code></pre>
+<p>which produces the following output:</p>
+<pre><code class="language-txt">dimakura.github.io
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="numbers"><a class="header" href="#numbers">Numbers</a></h1>
+<p>In Python we mostly deal with two types of numbers: integers and floating-point numbers.</p>
+<h2 id="integers"><a class="header" href="#integers">Integers</a></h2>
+<p>Integers are whole numbers, such as <code>1</code>, <code>2</code>, <code>3</code>, etc. Integers can be positive or negative.</p>
+<p>Python supports basic arithmetic operations on integers, such as addition (<code>+</code>), subtraction (<code>-</code>), multiplication (<code>*</code>), and division (<code>/</code>).</p>
+<p>Tihs is a simple example of using integer operations in Python:</p>
+<pre><code class="language-python">print(2 + 3)
+print(2 - 3)
+print(2 * 3)
+print(3 / 2)
+</code></pre>
+<p>which will print:</p>
+<pre><code class="language-text">5
+-1
+6
+1.5
+</code></pre>
+<p>Note that the division operator (<code>/</code>) always returns a floating-point number, even if the result is a whole number.</p>
+<p>Few more useful operations on numbers are the exponentiation operator (<code>**</code>), the modulo operator (<code>%</code>), and the floor division operator (<code>//</code>).</p>
+<h2 id="floating-point-numbers"><a class="header" href="#floating-point-numbers">Floating-Point Numbers</a></h2>
+<p>Any number with a decimal point is a floating-point number. Python supports the same basic arithmetic operations on floating-point numbers as it does on integers.</p>
+<p>As an exercise, try to practice operations on floating-point numbers by modifying the examples above.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="checking-variable-types"><a class="header" href="#checking-variable-types">Checking Variable Types</a></h1>
+<p>If you are not sure what type a variable is, you can ask Python to tell you. For example, if you have a variable called <code>x</code>, you can ask Python what type it is by using the <code>type()</code> function:</p>
+<pre><code class="language-python">x = 10
+y = 20.0
+z = 'hello'
+
+print(type(x))
+print(type(y))
+print(type(z))
+</code></pre>
+<p>which will print:</p>
+<pre><code class="language-text">&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="comments"><a class="header" href="#comments">Comments</a></h1>
+<p>Comments are lines that exist in a programs that are ignored by Python. Including comments in programs makes code more readable for humans as it provides some information or explanation about what each part of a program is doing.</p>
+<p>In Python, the <code>#</code> character indicates the start of a comment. Any characters after the <code>#</code> and up to the end of the line are part of a comment and will be ignored by the Python interpreter.</p>
+<pre><code class="language-python"># this is a comment
+message = &quot;Hello, World!&quot; # this is also a comment
+</code></pre>
+<p>Another way to write comments in Python is to use multi-line strings. Python ignores multi-line strings that are not assigned to a variable, so they can be used as comments.</p>
+<pre><code class="language-python">&quot;&quot;&quot;
+This is a multi-line comment.
+&quot;&quot;&quot;
+message = &quot;Hello, World!&quot;
+</code></pre>
 
                     </main>
 

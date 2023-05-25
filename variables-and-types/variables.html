@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Variables - Introduction to Python</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../getting-started/intro.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../getting-started/python.html"><strong aria-hidden="true">1.1.</strong> Installing Python</a></li><li class="chapter-item expanded "><a href="../getting-started/vscode.html"><strong aria-hidden="true">1.2.</strong> Installing VS Code</a></li><li class="chapter-item expanded "><a href="../getting-started/hello-world.html"><strong aria-hidden="true">1.3.</strong> Hello World</a></li></ol></li><li class="chapter-item expanded "><a href="../variables-and-types/intro.html"><strong aria-hidden="true">2.</strong> Variables and Simple Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../variables-and-types/variables.html" class="active"><strong aria-hidden="true">2.1.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../variables-and-types/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../variables-and-types/numbers.html"><strong aria-hidden="true">2.3.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="../variables-and-types/type-checking.html"><strong aria-hidden="true">2.4.</strong> Checking Variable Types</a></li><li class="chapter-item expanded "><a href="../variables-and-types/comments.html"><strong aria-hidden="true">2.5.</strong> Comments</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Introduction to Python</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<p>In the previous lecture we wrote a simple program that printed a message to the screen.</p>
+<p>Here's an equivalent program:</p>
+<p>File: <code>hello-world.py</code></p>
+<pre><code class="language-py">message = &quot;Hello, World!&quot;
+print(message)
+</code></pre>
+<p>We can run this program by typing <code>python hello-world.py</code> in the terminal. As before, the program will print the message <code>&quot;Hello, World!&quot;</code> to the screen.</p>
+<blockquote>
+<p><strong>Note</strong>: Miniconda environment, <code>pyintro</code>, should be activated before running the program.</p>
+<pre><code class="language-bash">$ conda activate pyintro
+</code></pre>
+<p>This will be our default way of running Python programs in this book.
+And we won't remind you about it in the future.</p>
+</blockquote>
+<p>Back to the program. The first line of the program declares a variable.</p>
+<pre><code class="language-py">message = &quot;Hello, World!&quot;
+</code></pre>
+<p>In Python, variables are created when you assign a value to them using the <code>=</code> operator. In this case, we assign the message <code>&quot;Hello, World!&quot;</code> to the variable <code>message</code>.</p>
+<p>Variable has a name and a value. In this case, the name of the variable is <code>message</code> and the value is <code>&quot;Hello, World!&quot;</code>. You can think of variables as containers for storing data. We can later use the variable to access the data stored in it, by its name. Like we do on the second line:</p>
+<pre><code class="language-py">print(message)
+</code></pre>
+<h2 id="type-annotation"><a class="header" href="#type-annotation">Type annotation</a></h2>
+<p>One important propery of a variable, which might not be obvious from the example above, is its <em>type</em>. In this case, the type of the variable is <code>str</code>, which is short for <em>string</em>. To make this more explicit, we could have declared the variable in the following way:</p>
+<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
+</code></pre>
+<p>(note the <code>: str</code> part after variable name).</p>
+<p>This is called <em>type annotation</em>. It is not necessary in this case, because Python can infer the type of the variable from the value assigned to it. However, it is a good practice to use type annotations in your programs.</p>
+<p>In the rest of the book, we will use type annotations in all examples. Though, you can omit them at the beginning, if you find them confusing.</p>
+<p>The rest of the program is the same as before:</p>
+<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
+print(message)
+</code></pre>
+<p>with the same output</p>
+<pre><code class="language-txt">Hello, World!
+</code></pre>
+<blockquote>
+<h3 id="exercise"><a class="header" href="#exercise">Exercise</a></h3>
+<p>Try to change the program above a bit further.
+Declare a variable <code>name</code> and assign your name to it, for example <code>&quot;Bill&quot;</code>.
+Then print a message that says <code>&quot;Hello, Bill!&quot;</code>, using the <code>name</code> variable.
+In the next section you'll learn how to write such a program, but try to figure it out yourself first.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../variables-and-types/intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../variables-and-types/strings.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../variables-and-types/intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../variables-and-types/strings.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
