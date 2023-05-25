@@ -10,7 +10,6 @@ Now open WSL and type `code` to launch VS Code. For the first time, it will ask 
 
 ![VS Code Remote - WSL extension](vscode-remote-wsl.png.png)
 
-You will need two more extensions for Python development:
+You will need one more extension for Python development. It's called [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and is useful for syntax highlighting and code completion.
 
-1. [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) for syntax highlighting and code completion;
-2. [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) for interactive notebooks.
+One more extension that you might find useful is [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter). It allows you to run Jupyter notebooks inside VS Code. We won't explicitly use it in this course, but you might find it useful in your own explorations.

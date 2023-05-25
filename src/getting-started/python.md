@@ -50,16 +50,16 @@ conda 23.3.1 # your version might be different
 
 It's usual for Python developers to create a virtual environment for each project. This allows you to install different versions of Python and packages for each project.
 
-For this course, we will create a virtual environment called `pyinto`:
+For this course, we will create a virtual environment called `pyintro`:
 
 ```sh
-$ conda create -n pyinto python=3.11
+$ conda create -n pyintro python=3.11
 ```
 
 When you need to use this environment, you can activate it with:
 
 ```sh
-$ conda activate pyinto
+$ conda activate pyintro
 ```
 
 You can check it with:
@@ -68,3 +68,27 @@ You can check it with:
 $ python --version
 Python 3.11.3 # your version might be different
 ```
+
+You can also start Python shell with:
+
+```sh
+$ python
+```
+
+it will display the version and a prompt `>>>` where you can type Python commands.
+
+```sh
+Python 3.11.3
+>>> print(1 + 1)
+2
+```
+
+To exit the shell, type `exit()` or press `Ctrl+D`.
+
+> ### IPython
+>
+> A more advanced Python shell is [IPython](https://ipython.org/). You can install it with:
+>
+> ```sh
+> $ conda install ipython
+> ```
