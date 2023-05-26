@@ -6,10 +6,26 @@ To install it on your system open the [VS Code home page](https://code.visualstu
 
 Run the installer, and follow the on-screen instructions.
 
-Now open WSL and type `code` to launch VS Code. For the first time, it will ask you to install the Remote - WSL extension. Click on the Install button and wait for the installation to complete.
+In case of any problems, please refer to the [official installation guide](https://code.visualstudio.com/docs/setup/windows).
 
-![VS Code Remote - WSL extension](vscode-remote-wsl.png.png)
+## Adding Extensions
 
-You will need one more extension for Python development. It's called [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and is useful for syntax highlighting and code completion.
+Visual Studio Code is a very powerful editor, but can be more useful with extensions. Extensions are small programs that add new features to VS Code.
 
-One more extension that you might find useful is [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter). It allows you to run Jupyter notebooks inside VS Code. We won't explicitly use it in this course, but you might find it useful in your own explorations.
+We will need two extensions for our work: one for working with WSL and another for Python development.
+
+First start a WSL session with:
+
+```powershell
+> wsl ~
+```
+
+And launch VS Code with the following command:
+
+```sh
+code
+```
+
+If this is the first time you doing this, it will ask you to install the `Remote - WSL extension`. Click on the Install button and wait for the installation to complete.
+
+You will need one more extension for Python development. It's called [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and is useful for syntax highlighting and code completion. To install it, press `Ctrl+Shift+X` to open the Extensions panel, type `Python` in the search box, and click on the `Install` button.

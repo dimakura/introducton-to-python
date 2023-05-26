@@ -1,0 +1,8 @@
+['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+mon
+Mon
+Tue
+Wed
+Sun
+Sat
+<class 'list'>

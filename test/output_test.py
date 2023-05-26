@@ -1,6 +1,12 @@
 import os
+import re
 from pathlib import Path
 import subprocess
+
+
+def remove_project_dir(string):
+    regex = r'File "[\S]+/([\S]+.py)"'
+    return re.sub(regex, r'File "\1"', string)
 
 
 def output_verification(filename: str):
@@ -16,34 +22,51 @@ def output_verification(filename: str):
     else:
         expected_output = ''
 
-    actual_output = subprocess.check_output(['python', python_path])
-    assert expected_output == actual_output.decode('utf-8')
+    try:
+        actual_output = subprocess.check_output(['python', python_path], stderr=subprocess.STDOUT).decode('utf-8')
+    except subprocess.CalledProcessError as e:
+        full_output = e.output.decode('utf-8')
+        actual_output = remove_project_dir(full_output)
+
+    assert expected_output == actual_output
 
 
-def test_ch01_outputs():
-    output_verification('ch01/hello_world')
+def test_getting_started_outputs():
+    output_verification('getting-started/hello_world')
 
 
-def test_ch02_strings_outputs():
-    output_verification('ch02/hello_world')
-    output_verification('ch02/hello_world_typed')
-    output_verification('ch02/message_comparison')
-    output_verification('ch02/quoted_strings')
-    output_verification('ch02/upper_method')
-    output_verification('ch02/lower_method')
-    output_verification('ch02/title_method')
-    output_verification('ch02/f_strings')
-    output_verification('ch02/f_strings2')
-    output_verification('ch02/whitespace')
-    output_verification('ch02/strip')
-    output_verification('ch02/removeprefix')
+def test_variables_and_types_outputs():
+    # string
+    output_verification('variables-and-types/hello_world')
+    output_verification('variables-and-types/message_comparison')
+    output_verification('variables-and-types/quoted_strings')
+    output_verification('variables-and-types/upper_method')
+    output_verification('variables-and-types/lower_method')
+    output_verification('variables-and-types/title_method')
+    output_verification('variables-and-types/f_strings')
+    output_verification('variables-and-types/f_strings2')
+    output_verification('variables-and-types/whitespace')
+    output_verification('variables-and-types/strip')
+    output_verification('variables-and-types/removeprefix')
+
+    # numbers
+    output_verification('variables-and-types/integers')
+    output_verification('variables-and-types/integers2')
+
+    # types
+    output_verification('variables-and-types/typechecking')    
 
 
-def test_ch02_numbers_outputs():
-    output_verification('ch02/integers')
-    output_verification('ch02/integers2')
-
-
-def test_ch02_type_checking_output():
-    output_verification('ch02/typechecking')
-
+def test_list_outputs():
+    output_verification('lists/days')
+    output_verification('lists/days_typed')
+    output_verification('lists/add')
+    output_verification('lists/pop')
+    output_verification('lists/remove')
+    output_verification('lists/clear')
+    output_verification('lists/del')
+    output_verification('lists/del_list')
+    output_verification('lists/len')
+    output_verification('lists/sorting')
+    output_verification('lists/reverse')
+    output_verification('lists/modify')

@@ -1,0 +1,10 @@
+<class 'list'>
+['mon', 'tue', 'wed']
+['mon', 'tue', 'wed']
+['thu', 'fri', 'sat', 'sun']
+['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+Traceback (most recent call last):
+  File "days_typed.py", line 29, in <module>
+    days[7] # the last index is 6
+    ~~~~^^^
+IndexError: list index out of range
