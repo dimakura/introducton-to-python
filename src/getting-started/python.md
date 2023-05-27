@@ -52,14 +52,14 @@ conda 23.3.1 # your version might be different
 To prevent Miniconda from activating the base environment by default, run:
 
 ```sh
-conda config --set auto_activate_base false
+$ conda config --set auto_activate_base false
 ```
 
 ## Prepare your environment
 
 It's usual for Python developers to create a virtual environment for each project. This allows you to install different versions of Python and packages for each project.
 
-For this course, we will create a virtual environment called `pyintro`:
+For this book, we will create a virtual environment called `pyintro`:
 
 ```sh
 $ conda create -n pyintro python=3.11
@@ -97,5 +97,5 @@ To exit the shell, type `exit()` or press `Ctrl+D`.
 To deactivate the Conda environment, run:
 
 ```sh
-conda deactivate
+$ conda deactivate
 ```

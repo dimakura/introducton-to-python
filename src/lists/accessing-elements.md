@@ -87,7 +87,7 @@ On the first list, we _import_ `List` class from a module called `typing`.
 {{#include ../../listings/lists/days_typed.py:import}}
 ```
 
-We'll discuss modules and import in more details later in this book. For now just remember that modules provide additional functionality to Python programs. We'll be using other classes from `typing` module throughout the book.
+We'll discuss modules and imports in more details later in this book. For now just remember that modules provide additional functionality to Python programs. We'll be using other classes from `typing` module throughout the book.
 
 On the next line,
 
@@ -96,20 +96,20 @@ On the next line,
 ```
 
 we declare variable `days` to be of type `List` and initialize it with a list of strings.
-Note that `List` has additional specifier `[str]` which means that the list will contain strings.
+Note that `List` has additional parameter `[str]` which means that the list will contain strings.
 If we wanted to create a list of integers, we would use `List[int]` instead.
 
 ## Slicing
 
-We can access multiple elements of a list by using _slicing_.
+We can access multiple elements of a list with _slicing_.
 
-Let's add few more lines to our `days.py` program:
+Here we print the first three elements of the list:
 
 ```py
 {{#include ../../listings/lists/days_typed.py:slice1}}
 ```
 
-Instead of a single index we now use two indices separated by a colon. This has an effect of producing a new list which contains elements from the first index up to (but not including) the second index. In our example, we get a list which contains elements from index `1` up to (but not including) index `3`. Let's check the output:
+Instead of a single index we now use two indices separated by a colon. This has an effect of producing a new list which contains elements from the first index up to (but not including) the second index. In our example, we get a list which contains elements from index `0` up to (but not including) index `3`. Let's check the output:
 
 ```py
 {{#include ../../listings/lists/days_typed.out:2}}
@@ -121,7 +121,7 @@ In the example above we could have omitted the first index and just write `days[
 {{#include ../../listings/lists/days_typed.py:slice2}}
 ```
 
-If we wanted to get a list of remaining days,
+If we wanted to get a list of remaining days, we could write:
 
 ```py
 {{#include ../../listings/lists/days_typed.py:slice3}}

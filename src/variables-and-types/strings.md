@@ -3,7 +3,7 @@
 In previous section we declared a string variable `message` and printed it to the screen. 
 
 ```py
-{{#include ../../listings/variables-and-types/hello_world_typed.py:all}}
+{{#include ../../listings/variables-and-types/hello_world.py:typed-var}}
 ```
 
 What exactly is a string? A string is a sequence of characters. In the example above, the string `"Hello, World!"` consists of 13 characters: `H`, `e`, `l`, `l`, `o`, `,`, ` `, `W`, `o`, `r`, `l`, `d`, `!`.
@@ -36,6 +36,13 @@ It's also possible to use the same type of quotes inside a string, but you have 
 
 ```py
 "I said, \"Hello, World!\""
+```
+
+To include a backslash in a string, you have to escape it with another backslash:
+
+```sh
+>>> print("C:\\Users\\John")
+C:\Users\John
 ```
 
 ## Some Useful String Methods
@@ -160,11 +167,35 @@ and compare the output:
 Another useful method is `removeprefix()`. It removes a prefix from a string. For example, if you have an url, you can remove ``
 
 ```py
-{{#include ../../listings/variables-and-types/removeprefix.py}}
+{{#include ../../listings/variables-and-types/removeprefix.py:prefix}}
 ```
 
 which produces the following output:
 
 ```txt
-{{#include ../../listings/variables-and-types/removeprefix.out}}
+{{#include ../../listings/variables-and-types/removeprefix.out:1}}
+```
+
+You can also use `removesuffix()` to remove a suffix from a string:
+
+```py
+{{#include ../../listings/variables-and-types/removeprefix.py:suffix}}
+```
+
+with output:
+
+```txt
+{{#include ../../listings/variables-and-types/removeprefix.out:2}}
+```
+
+Or you can use both methods simultaneously:
+
+```py
+{{#include ../../listings/variables-and-types/removeprefix.py:prefix-suffix}}
+```
+
+which gives
+
+```txt
+{{#include ../../listings/variables-and-types/removeprefix.out:3}}
 ```
