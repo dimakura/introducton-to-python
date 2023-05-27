@@ -10,14 +10,14 @@ Python supports basic arithmetic operations on integers, such as addition (`+`),
 
 Tihs is a simple example of using integer operations in Python:
 
-```python
-{{#include ../../listings/ch02/integers.py}}
+```py
+{{#include ../../listings/variables-and-types/integers.py}}
 ```
 
 which will print:
 
-```text
-{{#include ../../listings/ch02/integers.out}}
+```txt
+{{#include ../../listings/variables-and-types/integers.out}}
 ```
 
 Note that the division operator (`/`) always returns a floating-point number, even if the result is a whole number.

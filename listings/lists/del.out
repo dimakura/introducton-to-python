@@ -1,0 +1,6 @@
+10
+Traceback (most recent call last):
+  File "del.py", line 11, in <module>
+    print(a)
+          ^
+NameError: name 'a' is not defined
