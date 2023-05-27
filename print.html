@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="getting-started/index.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/python.html"><strong aria-hidden="true">1.1.</strong> Installing Python</a></li><li class="chapter-item expanded "><a href="getting-started/vscode.html"><strong aria-hidden="true">1.2.</strong> Installing VS Code</a></li><li class="chapter-item expanded "><a href="getting-started/hello-world.html"><strong aria-hidden="true">1.3.</strong> Hello World</a></li></ol></li><li class="chapter-item expanded "><a href="variables-and-types/index.html"><strong aria-hidden="true">2.</strong> Variables and Simple Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="variables-and-types/variables.html"><strong aria-hidden="true">2.1.</strong> Variables</a></li><li class="chapter-item expanded "><a href="variables-and-types/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li><li class="chapter-item expanded "><a href="variables-and-types/numbers.html"><strong aria-hidden="true">2.3.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="variables-and-types/type-checking.html"><strong aria-hidden="true">2.4.</strong> Checking Variable Types</a></li><li class="chapter-item expanded "><a href="variables-and-types/comments.html"><strong aria-hidden="true">2.5.</strong> Comments</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="getting-started/index.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/python.html"><strong aria-hidden="true">1.1.</strong> Installing Python</a></li><li class="chapter-item expanded "><a href="getting-started/vscode.html"><strong aria-hidden="true">1.2.</strong> Installing VS Code</a></li><li class="chapter-item expanded "><a href="getting-started/hello-world.html"><strong aria-hidden="true">1.3.</strong> Hello World</a></li></ol></li><li class="chapter-item expanded "><a href="variables-and-types/index.html"><strong aria-hidden="true">2.</strong> Variables and Simple Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="variables-and-types/variables.html"><strong aria-hidden="true">2.1.</strong> Variables</a></li><li class="chapter-item expanded "><a href="variables-and-types/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li><li class="chapter-item expanded "><a href="variables-and-types/numbers.html"><strong aria-hidden="true">2.3.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="variables-and-types/type-checking.html"><strong aria-hidden="true">2.4.</strong> Type Checking</a></li><li class="chapter-item expanded "><a href="variables-and-types/comments.html"><strong aria-hidden="true">2.5.</strong> Comments</a></li></ol></li><li class="chapter-item expanded "><a href="lists/index.html"><strong aria-hidden="true">3.</strong> Lists</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lists/creating-lists.html"><strong aria-hidden="true">3.1.</strong> Creating Lists</a></li><li class="chapter-item expanded "><a href="lists/accessing-elements.html"><strong aria-hidden="true">3.2.</strong> Accessing Elements</a></li><li class="chapter-item expanded "><a href="lists/modifying-lists.html"><strong aria-hidden="true">3.3.</strong> Modifying Lists</a></li><li class="chapter-item expanded "><a href="lists/del.html"><strong aria-hidden="true">3.4.</strong> del Operator</a></li><li class="chapter-item expanded "><a href="lists/length.html"><strong aria-hidden="true">3.5.</strong> Length</a></li><li class="chapter-item expanded "><a href="lists/sorting.html"><strong aria-hidden="true">3.6.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="lists/reverse.html"><strong aria-hidden="true">3.7.</strong> Reverse Order</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -158,17 +158,18 @@
 <li><a href="getting-started/./hello-world.html">Write our first program</a> in Python.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installing-python"><a class="header" href="#installing-python">Installing Python</a></h1>
-<p>There are many possible ways to install Python on your system.
-Here we will cover WSL installation on Windows 11.</p>
+<p>There are few ways to install Python on your system. Here we will cover WSL installation on Windows 11.</p>
 <h2 id="installing-windows-subsystem-for-linux-wsl"><a class="header" href="#installing-windows-subsystem-for-linux-wsl">Installing Windows Subsystem for Linux (WSL)</a></h2>
 <p>WSL gives you a Linux environment running on Windows.</p>
+<p>If you already are using Linux or macOS, or you have WSL installed, you can skip this section.</p>
 <p>To install WSL, first open PowerShell as an adminstrator. For this, press the Windows key, type <code>powershell</code>, right-click on the <code>Windows PowerShell</code> app and select <code>Run as administrator</code>. Then enter the following command:</p>
-<pre><code class="language-powershell">$ wsl --install
+<pre><code class="language-powershell">&gt; wsl --install
 </code></pre>
-<p>and press <code>Enter</code>. This will install Ubuntu distribution and restart your computer.</p>
-<p>Once restarted, open PowerSheel again, this time as a normal user. Then start your Linux session with:</p>
-<pre><code class="language-powershell">$ wsl ~
+<p>and press <code>Enter</code>. This will install default Linux distribution (Ubuntu). To complete the installation, restart your computer.</p>
+<p>Once restarted, open PowerSheel again, this time as a normal user. Then start a Linux session with:</p>
+<pre><code class="language-powershell">&gt; wsl ~
 </code></pre>
+<p>If you experience any problems, please refer to <a href="https://learn.microsoft.com/en-us/windows/wsl/install#install-wsl-command">Microsoft documentation</a>.</p>
 <h2 id="installing-miniconda"><a class="header" href="#installing-miniconda">Installing Miniconda</a></h2>
 <p><a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> is a package manager that allows you to install Python and other packages.</p>
 <p>Execute the following commands in your terminal:</p>
@@ -183,6 +184,9 @@ $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 <pre><code class="language-sh">$ conda --version
 conda 23.3.1 # your version might be different
 </code></pre>
+<p>To prevent Miniconda from activating the base environment by default, run:</p>
+<pre><code class="language-sh">conda config --set auto_activate_base false
+</code></pre>
 <h2 id="prepare-your-environment"><a class="header" href="#prepare-your-environment">Prepare your environment</a></h2>
 <p>It's usual for Python developers to create a virtual environment for each project. This allows you to install different versions of Python and packages for each project.</p>
 <p>For this course, we will create a virtual environment called <code>pyintro</code>:</p>
@@ -191,7 +195,7 @@ conda 23.3.1 # your version might be different
 <p>When you need to use this environment, you can activate it with:</p>
 <pre><code class="language-sh">$ conda activate pyintro
 </code></pre>
-<p>You can check it with:</p>
+<p>You can check that Python is installed by running:</p>
 <pre><code class="language-sh">$ python --version
 Python 3.11.3 # your version might be different
 </code></pre>
@@ -199,38 +203,43 @@ Python 3.11.3 # your version might be different
 <pre><code class="language-sh">$ python
 </code></pre>
 <p>it will display the version and a prompt <code>&gt;&gt;&gt;</code> where you can type Python commands.</p>
-<pre><code class="language-sh">Python 3.11.3
+<pre><code class="language-pyshell">Python 3.11.3
 &gt;&gt;&gt; print(1 + 1)
 2
 </code></pre>
 <p>To exit the shell, type <code>exit()</code> or press <code>Ctrl+D</code>.</p>
-<blockquote>
-<h3 id="ipython"><a class="header" href="#ipython">IPython</a></h3>
-<p>A more advanced Python shell is <a href="https://ipython.org/">IPython</a>. You can install it with:</p>
-<pre><code class="language-sh">$ conda install ipython
+<p>To deactivate the Conda environment, run:</p>
+<pre><code class="language-sh">conda deactivate
 </code></pre>
-</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installing-vs-code"><a class="header" href="#installing-vs-code">Installing VS Code</a></h1>
 <p>Visual Studio Code (VS Code) is a free and open-source code editor developed by Microsoft.</p>
 <p>To install it on your system open the <a href="https://code.visualstudio.com/">VS Code home page</a> and download the installer for your operating system (we assume, it's Windows 11).</p>
 <p>Run the installer, and follow the on-screen instructions.</p>
-<p>Now open WSL and type <code>code</code> to launch VS Code. For the first time, it will ask you to install the Remote - WSL extension. Click on the Install button and wait for the installation to complete.</p>
-<p><img src="getting-started/vscode-remote-wsl.png.png" alt="VS Code Remote - WSL extension" /></p>
-<p>You will need one more extension for Python development. It's called <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> and is useful for syntax highlighting and code completion.</p>
-<p>One more extension that you might find useful is <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a>. It allows you to run Jupyter notebooks inside VS Code. We won't explicitly use it in this course, but you might find it useful in your own explorations.</p>
+<p>In case of any problems, please refer to the <a href="https://code.visualstudio.com/docs/setup/windows">official installation guide</a>.</p>
+<h2 id="adding-extensions"><a class="header" href="#adding-extensions">Adding Extensions</a></h2>
+<p>Visual Studio Code is a very powerful editor, but can be more useful with extensions. Extensions are small programs that add new features to VS Code.</p>
+<p>We will need two extensions for our work: one for working with WSL and another for Python development.</p>
+<p>First start a WSL session with:</p>
+<pre><code class="language-powershell">&gt; wsl ~
+</code></pre>
+<p>And launch VS Code with the following command:</p>
+<pre><code class="language-sh">code
+</code></pre>
+<p>If this is the first time you doing this, it will ask you to install the <code>Remote - WSL extension</code>. Click on the Install button and wait for the installation to complete.</p>
+<p>You will need one more extension for Python development. It's called <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> and is useful for syntax highlighting and code completion. To install it, press <code>Ctrl+Shift+X</code> to open the Extensions panel, type <code>Python</code> in the search box, and click on the <code>Install</code> button.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">Hello World</a></h1>
 <p>Create a new directory called <code>pyintro</code> and open it in VS Code.</p>
-<pre><code class="language-bash">$ cd ~          # go to your home directory
+<pre><code class="language-sh">$ cd ~          # go to your home directory
 $ mkdir pyintro # create a project directory
 $ cd pyintro    # change the current directory
 $ code .        # open VS Code
 </code></pre>
-<p>Create a new file called and add the following code:</p>
+<p>Create a new file add the following code to it:</p>
 <p>File: <code>hello_world.py</code></p>
 <pre><code class="language-py">print(&quot;Hello, World!&quot;)
 </code></pre>
 <p>To execute this code, run the following command in the terminal:</p>
-<pre><code class="language-bash">$ conda activate pyintro # make sure you are in the right environment
+<pre><code class="language-sh">$ conda activate pyintro # make sure you are in the right environment
 $ python hello_world.py  # run the script
 </code></pre>
 <p>This should print</p>
@@ -240,35 +249,56 @@ $ python hello_world.py  # run the script
 <p>Congratulations, you have just written your first Python program!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="variables-and-simple-data-types"><a class="header" href="#variables-and-simple-data-types">Variables and Simple Data Types</a></h1>
 <p>In this lecture, you will learn about variables and simple data types in Python.</p>
+<ol>
+<li>We start our discussion with what <a href="variables-and-types/./variables.html">variable</a> is;</li>
+<li>Then we will learn about <a href="variables-and-types/./strings.html">strings</a> and <a href="variables-and-types/./numbers.html">numbers</a> and how to work with them;</li>
+<li>Finally, we will learn about type hints and how to use them in Python;</li>
+<li>At the very end you will learn how to better document your code using <a href="variables-and-types/./comments.html">comments</a>.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
-<p>In the previous lecture we wrote a simple program that printed a message to the screen.</p>
-<p>Here's an equivalent program:</p>
+<p>In the <a href="variables-and-types/../getting-started/hello-world.html">previous chapter</a> we wrote a simple program that printed a welcome message to the screen.</p>
+<p>Now we'll rewrite this program using variables.</p>
 <p>File: <code>hello-world.py</code></p>
 <pre><code class="language-py">message = &quot;Hello, World!&quot;
 print(message)
 </code></pre>
-<p>We can run this program by typing <code>python hello-world.py</code> in the terminal. As before, the program will print the message <code>&quot;Hello, World!&quot;</code> to the screen.</p>
-<blockquote>
-<p><strong>Note</strong>: Miniconda environment, <code>pyintro</code>, should be activated before running the program.</p>
-<pre><code class="language-bash">$ conda activate pyintro
+<p>As before, we can run this program by typing,</p>
+<pre><code class="language-sh">$ python hello-world.py
 </code></pre>
-<p>This will be our default way of running Python programs in this book.
-And we won't remind you about it in the future.</p>
+<p>in the shell. As before, the program will print the message</p>
+<pre><code class="language-txt">Hello, World!
+</code></pre>
+<p>to the screen.</p>
+<blockquote>
+<p><strong>Note</strong>: The conda environment, <code>pyintro</code>, should be activated before running the program.</p>
+<pre><code class="language-sh">$ conda activate pyintro
+$ python hello-world.py
+</code></pre>
+<p>This will be our way of running Python programs in this book. And we won't remind you about it in the future.</p>
 </blockquote>
-<p>Back to the program. The first line of the program declares a variable.</p>
+<p>So if the program does the same thing as before, what's the point of writing it in a different way? Before we answer this question, let's take a closer look at the program.</p>
+<p>The first line of the program declares a variable:</p>
 <pre><code class="language-py">message = &quot;Hello, World!&quot;
 </code></pre>
-<p>In Python, variables are created when you assign a value to them using the <code>=</code> operator. In this case, we assign the message <code>&quot;Hello, World!&quot;</code> to the variable <code>message</code>.</p>
-<p>Variable has a name and a value. In this case, the name of the variable is <code>message</code> and the value is <code>&quot;Hello, World!&quot;</code>. You can think of variables as containers for storing data. We can later use the variable to access the data stored in it, by its name. Like we do on the second line:</p>
+<p>In Python, variables are created when you assign a value to them using the <code>=</code> operator. Variable has a name and a value. In our case, the name of the variable is <code>message</code> and the value we assign to it is <code>&quot;Hello, World!&quot;</code>.</p>
+<p>You can think of variables as containers for storing data. We can later use the variable to access the data stored in it, by its name. In our case, we used the variable <code>message</code> to print the message to the screen:</p>
 <pre><code class="language-py">print(message)
 </code></pre>
-<h2 id="type-annotation"><a class="header" href="#type-annotation">Type annotation</a></h2>
+<p>The nice thing about variables is that we can continue to use them in other parts of the program. For example, we can print the message again, but this time printing it with uppercase letters. For this, we can add a new line to the program:</p>
+<pre><code class="language-py">print(message.upper())
+</code></pre>
+<p>The output of the program will be</p>
+<pre><code class="language-txt">Hello, World!
+HELLO, WORLD!
+</code></pre>
+<p>To answer our question from the beginning of this section, the point of using variables is that they allow us to reuse the data stored in them. In our case, we stored the message in the variable <code>message</code> and then used it twice in the program. If we need to change the message, we only need to change it in one place, where we assign the value to the variable. The rest of the program will use the new value automatically.</p>
+<h2 id="type-hits"><a class="header" href="#type-hits">Type Hits</a></h2>
 <p>One important propery of a variable, which might not be obvious from the example above, is its <em>type</em>. In this case, the type of the variable is <code>str</code>, which is short for <em>string</em>. To make this more explicit, we could have declared the variable in the following way:</p>
 <pre><code class="language-py">message: str = &quot;Hello, World!&quot;
 </code></pre>
 <p>(note the <code>: str</code> part after variable name).</p>
-<p>This is called <em>type annotation</em>. It is not necessary in this case, because Python can infer the type of the variable from the value assigned to it. However, it is a good practice to use type annotations in your programs.</p>
-<p>In the rest of the book, we will use type annotations in all examples. Though, you can omit them at the beginning, if you find them confusing.</p>
+<p>This is called <em>type hint</em>. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. However, it is a good practice to do so, because it makes the code easier to read and understand. Also different tools can use type hints to provide additional help when writing the code.</p>
+<p>In the rest of the book, we will use type hints in almost all examples. Though, you can omit them at the beginning, if you find them confusing.</p>
 <p>The rest of the program is the same as before:</p>
 <pre><code class="language-py">message: str = &quot;Hello, World!&quot;
 print(message)
@@ -276,17 +306,9 @@ print(message)
 <p>with the same output</p>
 <pre><code class="language-txt">Hello, World!
 </code></pre>
-<blockquote>
-<h3 id="exercise"><a class="header" href="#exercise">Exercise</a></h3>
-<p>Try to change the program above a bit further.
-Declare a variable <code>name</code> and assign your name to it, for example <code>&quot;Bill&quot;</code>.
-Then print a message that says <code>&quot;Hello, Bill!&quot;</code>, using the <code>name</code> variable.
-In the next section you'll learn how to write such a program, but try to figure it out yourself first.</p>
-</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
 <p>In previous section we declared a string variable <code>message</code> and printed it to the screen. </p>
-<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
-print(message)
+<pre><code class="language-py">{{#include ../../listings/variables-and-types/hello_world_typed.py:all}}
 </code></pre>
 <p>What exactly is a string? A string is a sequence of characters. In the example above, the string <code>&quot;Hello, World!&quot;</code> consists of 13 characters: <code>H</code>, <code>e</code>, <code>l</code>, <code>l</code>, <code>o</code>, <code>,</code>, <code> </code>, <code>W</code>, <code>o</code>, <code>r</code>, <code>l</code>, <code>d</code>, <code>!</code>.</p>
 <p>Strings are one of the most common data types that you'll encounter in Python programs. You can use them to represent names, addresses, messages, and many other kinds of information.</p>
@@ -367,7 +389,7 @@ print(f&quot;Hello, {full_name.title()}!&quot;)
 </tbody></table>
 </div>
 <p>And here's an example of using tabs and newlines:</p>
-<pre><code class="language-py">print(&quot;Languages:\n\tPython\n\tC\n\tJavaScript&quot;)
+<pre><code class="language-variables-and-types">print(&quot;Languages:\n\tPython\n\tC\n\tJavaScript&quot;)
 </code></pre>
 <p>and its output:</p>
 <pre><code class="language-txt">Languages:
@@ -405,13 +427,13 @@ print(url.removeprefix('https://'))
 <p>Integers are whole numbers, such as <code>1</code>, <code>2</code>, <code>3</code>, etc. Integers can be positive or negative.</p>
 <p>Python supports basic arithmetic operations on integers, such as addition (<code>+</code>), subtraction (<code>-</code>), multiplication (<code>*</code>), and division (<code>/</code>).</p>
 <p>Tihs is a simple example of using integer operations in Python:</p>
-<pre><code class="language-python">print(2 + 3)
+<pre><code class="language-py">print(2 + 3)
 print(2 - 3)
 print(2 * 3)
 print(3 / 2)
 </code></pre>
 <p>which will print:</p>
-<pre><code class="language-text">5
+<pre><code class="language-txt">5
 -1
 6
 1.5
@@ -421,9 +443,9 @@ print(3 / 2)
 <h2 id="floating-point-numbers"><a class="header" href="#floating-point-numbers">Floating-Point Numbers</a></h2>
 <p>Any number with a decimal point is a floating-point number. Python supports the same basic arithmetic operations on floating-point numbers as it does on integers.</p>
 <p>As an exercise, try to practice operations on floating-point numbers by modifying the examples above.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="checking-variable-types"><a class="header" href="#checking-variable-types">Checking Variable Types</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="type-checking"><a class="header" href="#type-checking">Type Checking</a></h1>
 <p>If you are not sure what type a variable is, you can ask Python to tell you. For example, if you have a variable called <code>x</code>, you can ask Python what type it is by using the <code>type()</code> function:</p>
-<pre><code class="language-python">x = 10
+<pre><code class="language-py">x = 10
 y = 20.0
 z = 'hello'
 
@@ -432,22 +454,367 @@ print(type(y))
 print(type(z))
 </code></pre>
 <p>which will print:</p>
-<pre><code class="language-text">&lt;class 'int'&gt;
+<pre><code class="language-txt">&lt;class 'int'&gt;
 &lt;class 'float'&gt;
 &lt;class 'str'&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comments"><a class="header" href="#comments">Comments</a></h1>
 <p>Comments are lines that exist in a programs that are ignored by Python. Including comments in programs makes code more readable for humans as it provides some information or explanation about what each part of a program is doing.</p>
 <p>In Python, the <code>#</code> character indicates the start of a comment. Any characters after the <code>#</code> and up to the end of the line are part of a comment and will be ignored by the Python interpreter.</p>
-<pre><code class="language-python"># this is a comment
+<pre><code class="language-py"># this is a comment
 message = &quot;Hello, World!&quot; # this is also a comment
 </code></pre>
 <p>Another way to write comments in Python is to use multi-line strings. Python ignores multi-line strings that are not assigned to a variable, so they can be used as comments.</p>
-<pre><code class="language-python">&quot;&quot;&quot;
+<pre><code class="language-py">&quot;&quot;&quot;
 This is a multi-line comment.
 &quot;&quot;&quot;
 message = &quot;Hello, World!&quot;
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lists"><a class="header" href="#lists">Lists</a></h1>
+<p>A list is a collection of items stored in a particular order. You can make a list that includes the letters of the alphabet, the digits from 0–9, or the names of all of your coworkers. You can put anything you want into a list, and the items in your list don’t have to be related in any particular way. Because a list usually contains more than one element, it’s a good idea to make the name of your list plural, such as <code>letters</code>, <code>digits</code>, or <code>names</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-lists"><a class="header" href="#creating-lists">Creating Lists</a></h1>
+<p>To create a list, enclose the elements within square brackets, separated by commas.</p>
+<p>For example, let's create a list of weekdays:</p>
+<p>File: <code>days.py</code></p>
+<pre><code class="language-py">days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+print(days)
+</code></pre>
+<p>The output looks exactly like the list in the source code. But this is not always the case:</p>
+<pre><code class="language-py">['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="accessing-elements"><a class="header" href="#accessing-elements">Accessing Elements</a></h1>
+<p>Individual items in our list are called list elements. We can access them by their index. The index of the first element is <code>0</code>, the index of the second element is <code>1</code>, and so on.</p>
+<p>To continue with our example from the previous section, we add one more line to <code>days.py</code> program:</p>
+<pre><code class="language-py">print(days[0])
+</code></pre>
+<p>which prints the first element of the list:</p>
+<pre><code class="language-py">mon
+</code></pre>
+<p>It would be nice to capitalize the first letter of the day. We can do this by using the <code>title()</code> method:</p>
+<pre><code class="language-py">print(days[0].title())
+</code></pre>
+<p>which looks much better:</p>
+<pre><code class="language-py">Mon
+</code></pre>
+<p>We can now try to print more elements:</p>
+<pre><code class="language-py">print(days[0].title())
+print(days[1].title())
+print(days[2].title())
+</code></pre>
+<p>which prints:</p>
+<pre><code class="language-py">Mon
+Tue
+Wed
+</code></pre>
+<p>One neat trick is to use negative indices. The index <code>-1</code> refers to the last element, <code>-2</code> refers to the second last element, and so on. Try it youself, by adding few more lines to the <code>days.py</code> program:</p>
+<pre><code class="language-py">print(days[-1].title())
+print(days[-2].title())
+</code></pre>
+<p>and check the output:</p>
+<pre><code class="language-py">Sun
+Sat
+</code></pre>
+<h2 id="list-type"><a class="header" href="#list-type">List Type</a></h2>
+<p>Remember that we can check the type of a variable by using the <code>type()</code> function. Let's check the type of our list:</p>
+<pre><code class="language-py">print(type(days))
+</code></pre>
+<p>which produces:</p>
+<pre><code class="language-py">&lt;class 'list'&gt;
+</code></pre>
+<p>Python correctly identifies our variable as a list even though we didn't explicitly specify it.
+We could have been more explicit and specify the type of the variable using type hint:</p>
+<pre><code class="language-py">from typing import List
+
+days: List[str] = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+print(type(days))
+</code></pre>
+<p>which would again produce the same output as before:</p>
+<pre><code class="language-py">&lt;class 'list'&gt;
+</code></pre>
+<p>We will prefer using type hints in the rest of the book. But remember that they are ignored by Python interpreter, so you can also omit them if you want.</p>
+<p>Let's more closely analyze the code fragment above.</p>
+<p>On the first list, we <em>import</em> <code>List</code> class from a module called <code>typing</code>.</p>
+<pre><code class="language-py">from typing import List
+</code></pre>
+<p>We'll discuss modules and import in more details later in this book. For now just remember that modules provide additional functionality to Python programs. We'll be using other classes from <code>typing</code> module throughout the book.</p>
+<p>On the next line,</p>
+<pre><code class="language-py">days: List[str] = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+</code></pre>
+<p>we declare variable <code>days</code> to be of type <code>List</code> and initialize it with a list of strings.
+Note that <code>List</code> has additional specifier <code>[str]</code> which means that the list will contain strings.
+If we wanted to create a list of integers, we would use <code>List[int]</code> instead.</p>
+<h2 id="slicing"><a class="header" href="#slicing">Slicing</a></h2>
+<p>We can access multiple elements of a list by using <em>slicing</em>.</p>
+<p>Let's add few more lines to our <code>days.py</code> program:</p>
+<pre><code class="language-py">print(days[0:3])
+</code></pre>
+<p>Instead of a single index we now use two indices separated by a colon. This has an effect of producing a new list which contains elements from the first index up to (but not including) the second index. In our example, we get a list which contains elements from index <code>1</code> up to (but not including) index <code>3</code>. Let's check the output:</p>
+<pre><code class="language-py">['mon', 'tue', 'wed']
+</code></pre>
+<p>In the example above we could have omitted the first index and just write <code>days[:3]</code>. This would produce the same result.</p>
+<pre><code class="language-py">print(days[:3])
+</code></pre>
+<p>If we wanted to get a list of remaining days,</p>
+<pre><code class="language-py">print(days[3:7])
+</code></pre>
+<p>Note that we use <code>7</code> as the second index. This is because the second index is not included in the result, and the last index we want to select is <code>6</code>. The result is:</p>
+<pre><code class="language-py">['thu', 'fri', 'sat', 'sun']
+</code></pre>
+<p>You could also omit the second index and just write <code>days[3:]</code> if you want all remaining elements.</p>
+<p>One more trick is to omit both indices. This will produce a copy of the original list:</p>
+<pre><code class="language-py">print(days[:])
+</code></pre>
+<p>which outputs:</p>
+<pre><code class="language-txt">['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+</code></pre>
+<h2 id="out-of-range-error"><a class="header" href="#out-of-range-error">Out of Range Error</a></h2>
+<p>If we try to access an element by index which is too large, we get an error:</p>
+<p>For example:</p>
+<pre><code class="language-py">days[7] # the last index is 6
+</code></pre>
+<p>produces:</p>
+<pre><code class="language-txt">Traceback (most recent call last):
+  File &quot;days_typed.py&quot;, line 29, in &lt;module&gt;
+    days[7] # the last index is 6
+    ~~~~^^^
+IndexError: list index out of range
+</code></pre>
+<p>&quot;Out of range&quot; error is a common error in programming.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="modifying-lists"><a class="header" href="#modifying-lists">Modifying Lists</a></h1>
+<p>It's often necessary to modify lists after they've been created. You can easily add to or remove items from a list, and you can modify individual items in a list as well.</p>
+<h2 id="adding-elements-to-a-list"><a class="header" href="#adding-elements-to-a-list">Adding Elements to a List</a></h2>
+<p>We begin with a list of favorite programming languages,</p>
+<pre><code class="language-py">languages: List[str] = ['Python', 'C++']
+print(languages)
+</code></pre>
+<p>which produces the following output:</p>
+<pre><code class="language-txt">['Python', 'C++']
+</code></pre>
+<p>There are two ways to add a new element into this list. The first is to use the <code>append()</code> method, which adds the new element to the end of the list:</p>
+<pre><code class="language-py">languages.append('Java')
+print(languages)
+</code></pre>
+<p>The output is:</p>
+<pre><code class="language-txt">['Python', 'C++', 'Java']
+</code></pre>
+<p>You should usually prefer <code>append()</code> to add elements to a list, because it's very efficient.</p>
+<p>In comparison, the <code>insert()</code> method is less efficient, but it gives you more flexibiliy. Using <code>insert()</code>, you can add a new element at any position in your list by specifying the index of the new item. For example, to add the new language <code>'C'</code> at the beginning of the list, you would use the following code:</p>
+<pre><code class="language-py">languages.insert(0, 'C')
+print(languages)
+</code></pre>
+<p>which produces the following output:</p>
+<pre><code class="language-txt">['C', 'Python', 'C++', 'Java']
+</code></pre>
+<p>If you need to add a new programming language exactly in the middle of the list, you can use the <code>insert()</code> again:</p>
+<pre><code class="language-py">languages.insert(2, 'Rust')
+print(languages)
+</code></pre>
+<p>with the result:</p>
+<pre><code class="language-txt">['C', 'Python', 'Rust', 'C++', 'Java']
+</code></pre>
+<h2 id="removing-elements-from-a-list"><a class="header" href="#removing-elements-from-a-list">Removing Elements from a List</a></h2>
+<p>Now consider a problem when you want to remove an item from a list.</p>
+<p>There are two main ways to go about this task, depending on whether you know the position of the item you want to remove or you know its value.</p>
+<p>Let's begin with the case where you know the position of the item you want to remove. You can use <code>pop()</code> method for this.</p>
+<p>Let's see an example:</p>
+<pre><code class="language-py">numbers: List[int] = [1, 2, 3, 4, 5]
+
+print(numbers)         # original list
+print(numbers.pop())   # removing last element
+print(numbers)         # list after pop
+</code></pre>
+<p>which produces the following output:</p>
+<pre><code class="language-txt">[1, 2, 3, 4, 5]
+5
+[1, 2, 3, 4]
+</code></pre>
+<p>Notice the line where we <code>pop()</code>ed the element:</p>
+<pre><code class="language-py">print(numbers.pop())   # removing last element
+</code></pre>
+<p>In this case the last element is removed. And usually, you should prefer to use <code>pop()</code> in this way, because it's very efficient.</p>
+<p>There's another way to use <code>pop()</code>. If you want to remove an item from any position in a list, you can use the <code>pop()</code> method with an index. For example, let's remove the first item from our list:</p>
+<pre><code class="language-py">print(numbers.pop(0))  # removing first element
+print(numbers)
+</code></pre>
+<p>which produces the following output:</p>
+<pre><code class="language-txt">1
+[2, 3, 4]
+</code></pre>
+<p>When used with a positional argument, <code>pop()</code> is considerably slower but it gives you more flexibility.</p>
+<p>Another method for removing items from a list is <code>remove()</code>.
+This method is useful when you know the value of the item you want to remove from the list.
+The <code>remove()</code> method deletes only the first occurrence of the value you specify.
+Check this in action:</p>
+<pre><code class="language-py">list: List[int] = [1, 2, 3, 1, 5, 1]
+print(list)
+list.remove(1)
+print(list)
+</code></pre>
+<p>which gives us:</p>
+<pre><code class="language-txt">[1, 2, 3, 1, 5, 1]
+[2, 3, 1, 5, 1]
+</code></pre>
+<p>Notice that only the first <code>1</code> is removed from the list.</p>
+<p>We can apply <code>remove()</code> few more times:</p>
+<pre><code class="language-py">list.remove(3)
+list.remove(1)
+print(list)
+</code></pre>
+<p>which leaves us with:</p>
+<pre><code class="language-txt">[2, 5, 1]
+</code></pre>
+<p>Note that the last <code>1</code> is still in the list.</p>
+<p>If we try to remove element which is not in the list that would produce an error.</p>
+<h2 id="clearing-a-list"><a class="header" href="#clearing-a-list">Clearing a List</a></h2>
+<p>If you want to remove everything from a list, you can use the <code>clear()</code> method. For example,</p>
+<pre><code class="language-py">quarter: List[str] = ['january', 'february', 'march']
+quarter.clear()
+print(quarter)
+</code></pre>
+<p>which produces:</p>
+<pre><code class="language-py">[]
+</code></pre>
+<h2 id="modifying-elements-in-a-list"><a class="header" href="#modifying-elements-in-a-list">Modifying Elements in a List</a></h2>
+<p>It's possible to modify elements in a list by assigning new values to them. Let's see an example:</p>
+<p>File: <code>modify.py</code></p>
+<pre><code class="language-py">numbers: List[int] = [1, 2, 3, 4, 5]
+print(numbers)
+</code></pre>
+<p>Here we create a new list of integers and output it to the console:</p>
+<pre><code class="language-txt">[1, 2, 3, 4, 5]
+</code></pre>
+<p>We can now update individual elements of the list using assignment operator <code>=</code>:</p>
+<pre><code class="language-py">numbers[0] = 10
+numbers[-1] = numbers[-1] * 10
+print(numbers)
+</code></pre>
+<p>Note that we update first and last elements of the list. The index-access rules we've seen before apply here as well. The output of the program is:</p>
+<pre><code class="language-txt">[10, 2, 3, 4, 50]
+</code></pre>
+<p>It's even possible to modify slices of a list.</p>
+<pre><code class="language-py">numbers[1:4] = [33]
+print(numbers)
+</code></pre>
+<p>which replaces three middle elements of the list with a single element:</p>
+<pre><code class="language-txt">[10, 33, 50]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="del-operator"><a class="header" href="#del-operator"><code>del</code> Operator</a></h1>
+<p>Python's <code>del</code> operator is used to delete an object. It can be used to delete a variable, a list, or a part of a list (slice).</p>
+<h2 id="deleting-a-variable"><a class="header" href="#deleting-a-variable">Deleting a Variable</a></h2>
+<p>We've already seen how to declare a variable.</p>
+<p>Filename: <code>del.py</code></p>
+<pre><code class="language-py">a: int = 10
+print(a)
+</code></pre>
+<p>This outputs a number:</p>
+<pre><code class="language-py">10
+</code></pre>
+<p>Actually, we can delete the variable <code>a</code> using the <code>del</code> operator.</p>
+<pre><code class="language-py">del a
+</code></pre>
+<p>Deletion is the opossite of declaration. The variable <code>a</code> does not exist anymore! So, if we try to print it:</p>
+<pre><code class="language-py">print(a)
+</code></pre>
+<p>System will throw an error:</p>
+<pre><code class="language-txt">Traceback (most recent call last):
+  File &quot;del.py&quot;, line 11, in &lt;module&gt;
+    print(a)
+          ^
+NameError: name 'a' is not defined
+</code></pre>
+<h2 id="delete-an-item-from-a-list"><a class="header" href="#delete-an-item-from-a-list">Delete an Item from a List</a></h2>
+<p>You can use <code>del</code> to delete an item from a list. This looks pretty much like <code>pop()</code> method which we discussed in the <a href="lists/./modifying-lists.html#removing-elements-from-a-list">previous section</a>, but <code>del</code> does not return the deleted item.</p>
+<p>Filename: <code>del_list.py</code></p>
+<pre><code class="language-py">names: List[str] = ['Guido', 'Jukka', 'Ivan', 'Tim', 'Raymond']
+del names[1]  # remove 'Jukka'
+print(names)
+</code></pre>
+<p>This outputs:</p>
+<pre><code class="language-py">['Guido', 'Ivan', 'Tim', 'Raymond']
+</code></pre>
+<h2 id="delete-a-slice-from-a-list"><a class="header" href="#delete-a-slice-from-a-list">Delete a Slice from a List</a></h2>
+<p><code>del</code> can also be used to delete a slice from a list. This makes <code>del</code> more powerful than <code>pop()</code> method.</p>
+<p>Here's an example:</p>
+<pre><code class="language-py">del names[1:3]  # remove 'Ivan' and 'Tim'
+print(names)
+</code></pre>
+<p>which gives:</p>
+<pre><code class="language-py">['Guido', 'Raymond']
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="length"><a class="header" href="#length">Length</a></h1>
+<p>The <code>len()</code> function returns the number of elements in a list.</p>
+<p>File: <code>len.py</code></p>
+<pre><code class="language-py">cars: List[str] = ['bmw', 'mercedes', 'audi', 'subaru']
+print(len(cars))
+</code></pre>
+<p>which prints length of the list to the console</p>
+<pre><code class="language-py">4
+</code></pre>
+<p>We can use the <code>len()</code> function to determine length of other data types different from lists. For example, we can determine the length of a string.</p>
+<p>File: <code>len.py</code></p>
+<pre><code class="language-py">car: str = 'bmw'
+print(len(car))
+</code></pre>
+<p>produces</p>
+<pre><code class="language-py">3
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sorting"><a class="header" href="#sorting">Sorting</a></h1>
+<p>In this section we will use the following list or unordered numbers:</p>
+<pre><code class="language-py">numbers: List[int] = [7, 8, 1, 6, 5, 4, 3, 2, 10, 9]
+</code></pre>
+<p>What if we want to sort the list in ascending order? There are two ways to sort a list: temporarily and permanently.</p>
+<p>During temporary sorting, the original list is not modified and a sorted copy is returned. Temporary sorting is done using the <code>sorted()</code> function.</p>
+<pre><code class="language-py">sorted_numbes: List[int] = sorted(numbers) # sorted copy
+print(sorted_numbes) # print sorted numbers
+print(numbers)       # print original list
+</code></pre>
+<p>which gives us:</p>
+<pre><code class="language-txt">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[7, 8, 1, 6, 5, 4, 3, 2, 10, 9]
+</code></pre>
+<p>Note, that the originl list, <code>numbers</code>, is not modified.</p>
+<p>When sorting permanently, the original list is modified. Permanent sorting is done using the <code>sort()</code> method:</p>
+<pre><code class="language-py">numbers.sort() # sort in place
+print(numbers)
+</code></pre>
+<p>with the original list changed:</p>
+<pre><code class="language-txt">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre>
+<p>Note, that the in-place, permanent, sorting is more efficient than temporary sorting. On the other hand, temporary sorting is safer because it does not modify the original list.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reverse-order"><a class="header" href="#reverse-order">Reverse Order</a></h1>
+<p>You can reverse the order of a list by calling the <code>reverse()</code> method on the list. This method changes the order of the list permanently, but you can revert to the original order anytime by applying <code>reverse()</code> to the same list a second time.</p>
+<p>File: <code>reverse.py</code>:</p>
+<pre><code class="language-py">numbers: List[int] = list(range(1, 6))
+print(numbers)
+
+numbers.reverse() # reverse the list
+print(numbers)
+
+numbers.reverse() # reverse the list again
+print(numbers)
+</code></pre>
+<p>The first <code>print</code> statement outputs the original <code>numbers</code> list.</p>
+<pre><code class="language-txt">[1, 2, 3, 4, 5]
+</code></pre>
+<p>Note the way we created this list. <code>range(1, 6)</code> creates an <em>iterator</em> that produces the numbers <code>1</code> through <code>5</code> (<code>6</code> is not included). Then the <code>list()</code> function converts the iterator to a list.</p>
+<p>The first call to <code>reverse()</code> changes the order of the list permanently. This can be seen in the output:</p>
+<pre><code class="language-txt">[5, 4, 3, 2, 1]
+</code></pre>
+<p>The second call to <code>reverse()</code> changes the order of the list back to the original order:</p>
+<pre><code class="language-txt">[1, 2, 3, 4, 5]
+</code></pre>
+<p>As it was the case with sorting we can also reverse the order of a list temporarily by using the <code>reversed()</code> class.</p>
+<pre><code class="language-py">reversed_numbers: reversed = reversed(numbers)
+</code></pre>
+<p>One important distinction here is that <code>reversed</code> is a class, not a function. More specifically it's an iterator class. We can convert it to a list by using the <code>list()</code> function.</p>
+<p>If we now print it:</p>
+<pre><code class="language-py">print(list(reversed_numbers))
+</code></pre>
+<p>we get numbers in reverse order:</p>
+<pre><code class="language-txt">[5, 4, 3, 2, 1]
+</code></pre>
+<p>Note, that the original list, <code>numbers</code>, is not modified.</p>
+<p>In place reversal is usually faster than temporary reversal. On the other hand, temporary reversal is safer because it does not modify the original list. In addition, temporary reversal is <em>lazy</em>, meaning it does not perform any work until it is needed.</p>
 
                     </main>
 
