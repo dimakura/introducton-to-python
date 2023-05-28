@@ -169,7 +169,7 @@ print(numbers)
 <p>As it was the case with sorting we can also reverse the order of a list temporarily by using the <code>reversed()</code> class.</p>
 <pre><code class="language-py">reversed_numbers: reversed = reversed(numbers)
 </code></pre>
-<p>One important distinction here is that <code>reversed</code> is a class, not a function. More specifically it's an iterator class. We can convert it to a list by using the <code>list()</code> function.</p>
+<p>One important point here is that <code>reversed()</code> produces an iterator. We can convert it to a list by using the <code>list()</code> function.</p>
 <p>If we now print it:</p>
 <pre><code class="language-py">print(list(reversed_numbers))
 </code></pre>
@@ -177,7 +177,7 @@ print(numbers)
 <pre><code class="language-txt">[5, 4, 3, 2, 1]
 </code></pre>
 <p>Note, that the original list, <code>numbers</code>, is not modified.</p>
-<p>In place reversal is usually faster than temporary reversal. On the other hand, temporary reversal is safer because it does not modify the original list. In addition, temporary reversal is <em>lazy</em>, meaning it does not perform any work until it is needed.</p>
+<p>In place reversal is usually more efficient than temporary reversal. On the other hand, temporary reversal is safer because it does not modify the original list. In addition, temporary reversal is <em>lazy</em>, meaning it does not perform any work until it is needed.</p>
 
                     </main>
 

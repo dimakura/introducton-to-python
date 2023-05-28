@@ -198,25 +198,25 @@ print(type(days))
 <p>On the first list, we <em>import</em> <code>List</code> class from a module called <code>typing</code>.</p>
 <pre><code class="language-py">from typing import List
 </code></pre>
-<p>We'll discuss modules and import in more details later in this book. For now just remember that modules provide additional functionality to Python programs. We'll be using other classes from <code>typing</code> module throughout the book.</p>
+<p>We'll discuss modules and imports in more details later in this book. For now just remember that modules provide additional functionality to Python programs. We'll be using other classes from <code>typing</code> module throughout the book.</p>
 <p>On the next line,</p>
 <pre><code class="language-py">days: List[str] = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 </code></pre>
 <p>we declare variable <code>days</code> to be of type <code>List</code> and initialize it with a list of strings.
-Note that <code>List</code> has additional specifier <code>[str]</code> which means that the list will contain strings.
+Note that <code>List</code> has additional parameter <code>[str]</code> which means that the list will contain strings.
 If we wanted to create a list of integers, we would use <code>List[int]</code> instead.</p>
 <h2 id="slicing"><a class="header" href="#slicing">Slicing</a></h2>
-<p>We can access multiple elements of a list by using <em>slicing</em>.</p>
-<p>Let's add few more lines to our <code>days.py</code> program:</p>
+<p>We can access multiple elements of a list with <em>slicing</em>.</p>
+<p>Here we print the first three elements of the list:</p>
 <pre><code class="language-py">print(days[0:3])
 </code></pre>
-<p>Instead of a single index we now use two indices separated by a colon. This has an effect of producing a new list which contains elements from the first index up to (but not including) the second index. In our example, we get a list which contains elements from index <code>1</code> up to (but not including) index <code>3</code>. Let's check the output:</p>
+<p>Instead of a single index we now use two indices separated by a colon. This has an effect of producing a new list which contains elements from the first index up to (but not including) the second index. In our example, we get a list which contains elements from index <code>0</code> up to (but not including) index <code>3</code>. Let's check the output:</p>
 <pre><code class="language-py">['mon', 'tue', 'wed']
 </code></pre>
 <p>In the example above we could have omitted the first index and just write <code>days[:3]</code>. This would produce the same result.</p>
 <pre><code class="language-py">print(days[:3])
 </code></pre>
-<p>If we wanted to get a list of remaining days,</p>
+<p>If we wanted to get a list of remaining days, we could write:</p>
 <pre><code class="language-py">print(days[3:7])
 </code></pre>
 <p>Note that we use <code>7</code> as the second index. This is because the second index is not included in the result, and the last index we want to select is <code>6</code>. The result is:</p>

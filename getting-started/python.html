@@ -172,11 +172,11 @@ $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 conda 23.3.1 # your version might be different
 </code></pre>
 <p>To prevent Miniconda from activating the base environment by default, run:</p>
-<pre><code class="language-sh">conda config --set auto_activate_base false
+<pre><code class="language-sh">$ conda config --set auto_activate_base false
 </code></pre>
 <h2 id="prepare-your-environment"><a class="header" href="#prepare-your-environment">Prepare your environment</a></h2>
 <p>It's usual for Python developers to create a virtual environment for each project. This allows you to install different versions of Python and packages for each project.</p>
-<p>For this course, we will create a virtual environment called <code>pyintro</code>:</p>
+<p>For this book, we will create a virtual environment called <code>pyintro</code>:</p>
 <pre><code class="language-sh">$ conda create -n pyintro python=3.11
 </code></pre>
 <p>When you need to use this environment, you can activate it with:</p>
@@ -196,7 +196,7 @@ Python 3.11.3 # your version might be different
 </code></pre>
 <p>To exit the shell, type <code>exit()</code> or press <code>Ctrl+D</code>.</p>
 <p>To deactivate the Conda environment, run:</p>
-<pre><code class="language-sh">conda deactivate
+<pre><code class="language-sh">$ conda deactivate
 </code></pre>
 
                     </main>

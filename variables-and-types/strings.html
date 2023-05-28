@@ -146,7 +146,7 @@
                     <main>
                         <h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
 <p>In previous section we declared a string variable <code>message</code> and printed it to the screen. </p>
-<pre><code class="language-py">{{#include ../../listings/variables-and-types/hello_world_typed.py:all}}
+<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
 </code></pre>
 <p>What exactly is a string? A string is a sequence of characters. In the example above, the string <code>&quot;Hello, World!&quot;</code> consists of 13 characters: <code>H</code>, <code>e</code>, <code>l</code>, <code>l</code>, <code>o</code>, <code>,</code>, <code> </code>, <code>W</code>, <code>o</code>, <code>r</code>, <code>l</code>, <code>d</code>, <code>!</code>.</p>
 <p>Strings are one of the most common data types that you'll encounter in Python programs. You can use them to represent names, addresses, messages, and many other kinds of information.</p>
@@ -167,6 +167,10 @@ He said, 'Hello, Sarah!'
 </code></pre>
 <p>It's also possible to use the same type of quotes inside a string, but you have to escape them with a backslash <code>\</code>, for instance:</p>
 <pre><code class="language-py">&quot;I said, \&quot;Hello, World!\&quot;&quot;
+</code></pre>
+<p>To include a backslash in a string, you have to escape it with another backslash:</p>
+<pre><code class="language-sh">&gt;&gt;&gt; print(&quot;C:\\Users\\John&quot;)
+C:\Users\John
 </code></pre>
 <h2 id="some-useful-string-methods"><a class="header" href="#some-useful-string-methods">Some Useful String Methods</a></h2>
 <p>Python provides a number of useful methods for working with strings. A method is an action that Python can perform on a piece of data. The dot <code>.</code> after the name of the variable <code>name</code> in the following example tells Python to make the <code>upper()</code> method act on the variable.</p>
@@ -258,6 +262,18 @@ print(url.removeprefix('https://'))
 </code></pre>
 <p>which produces the following output:</p>
 <pre><code class="language-txt">dimakura.github.io
+</code></pre>
+<p>You can also use <code>removesuffix()</code> to remove a suffix from a string:</p>
+<pre><code class="language-py">print(url.removesuffix('.github.io'))
+</code></pre>
+<p>with output:</p>
+<pre><code class="language-txt">https://dimakura
+</code></pre>
+<p>Or you can use both methods simultaneously:</p>
+<pre><code class="language-py">print(url.removeprefix('https://').removesuffix('.github.io'))
+</code></pre>
+<p>which gives</p>
+<pre><code class="language-txt">dimakura
 </code></pre>
 
                     </main>

@@ -158,6 +158,29 @@ print(type(z))
 <pre><code class="language-txt">&lt;class 'int'&gt;
 &lt;class 'float'&gt;
 &lt;class 'str'&gt;
+True
+True
+True
+False
+False
+False
+</code></pre>
+<p>Related to <code>type()</code> is the <code>isinstance()</code> function, which can be used to check if a variable is of a certain type:</p>
+<pre><code class="language-py">print(isinstance(x, int))
+print(isinstance(y, float))
+print(isinstance(z, str))
+
+print(isinstance(x, float))
+print(isinstance(y, str))
+print(isinstance(z, int))
+</code></pre>
+<p>which will print:</p>
+<pre><code class="language-txt">True
+True
+True
+False
+False
+False
 </code></pre>
 
                     </main>
