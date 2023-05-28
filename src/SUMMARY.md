@@ -22,3 +22,23 @@
   - [Length](./lists/length.md)
   - [Sorting](./lists/sorting.md)
   - [Reverse Order](./lists/reverse.md)
+
+- [If Statement](./if/README.md)
+  - [An Example](./if/example.md)
+  - [Conditional Tests](./if/conditional-tests.md)
+  - [If Statement](./if/if-statement.md)
+  - [Complex Conditions](./if/complex-conditions.md)
+  - [List conditionals](./if/list-conditionals.md)
+  - [Negation](./if/negation.md)
+
+- [Loops]()
+
+- [More Data Types]()
+
+- [Functions]()
+
+- [Classes]()
+
+- [Exceptions]()
+
+- [I/O]()

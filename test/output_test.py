@@ -70,3 +70,13 @@ def test_list_outputs():
     output_verification('lists/sorting')
     output_verification('lists/reverse')
     output_verification('lists/modify')
+
+
+def test_if_outputs():
+    output_verification('if-statement/vote')
+    output_verification('if-statement/strings')
+    output_verification('if-statement/numbers')
+    output_verification('if-statement/simple-if')
+    output_verification('if-statement/if-else')
+    output_verification('if-statement/if-elif-else')
+    output_verification('if-statement/list')
