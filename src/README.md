@@ -2,7 +2,7 @@
 
 ## What is Python?
 
-Python is a programming language. It is a tool that allows us to tell a computer what to do. We can use Python to create websites, games, and even programs that can help us with our homework.
+Python is a programming language. It is a tool that allows us to tell a computer what to do. We can use Python to create websites, games, AI models, and more.
 
 ## Why Python?
 

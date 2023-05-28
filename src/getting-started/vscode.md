@@ -14,7 +14,7 @@ Visual Studio Code is a very powerful editor, but can be more useful with extens
 
 We will need two extensions for our work: one for working with WSL and another for Python development.
 
-First start a WSL session with:
+First start a WSL session using `PowerShell`:
 
 ```powershell
 > wsl ~

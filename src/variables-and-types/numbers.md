@@ -11,18 +11,29 @@ Python supports basic arithmetic operations on integers, such as addition (`+`),
 Tihs is a simple example of using integer operations in Python:
 
 ```py
-{{#include ../../listings/variables-and-types/integers.py}}
+{{#include ../../listings/variables-and-types/integers.py:int-arithmetic}}
 ```
 
 which will print:
 
 ```txt
-{{#include ../../listings/variables-and-types/integers.out}}
+{{#include ../../listings/variables-and-types/integers.out:1:4}}
 ```
 
 Note that the division operator (`/`) always returns a floating-point number, even if the result is a whole number.
 
 Few more useful operations on numbers are the exponentiation operator (`**`), the modulo operator (`%`), and the floor division operator (`//`).
+
+```py
+{{#include ../../listings/variables-and-types/integers.py:int-more}}
+```
+
+with output:
+
+```txt
+{{#include ../../listings/variables-and-types/integers.out:5:8}}
+```
+
 
 ## Floating-Point Numbers
 

@@ -14,6 +14,7 @@ Another way to write comments in Python is to use multi-line strings. Python ign
 ```py
 """
 This is a multi-line comment.
+Which can span multiple lines.
 """
 message = "Hello, World!"
 ```

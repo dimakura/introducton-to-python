@@ -34,7 +34,7 @@ As it was the case with sorting we can also reverse the order of a list temporar
 {{#include ../../listings/lists/reverse.py:temp}}
 ```
 
-One important distinction here is that `reversed` is a class, not a function. More specifically it's an iterator class. We can convert it to a list by using the `list()` function.
+One important point here is that `reversed()` produces an iterator. We can convert it to a list by using the `list()` function.
 
 If we now print it:
 
@@ -50,4 +50,4 @@ we get numbers in reverse order:
 
 Note, that the original list, `numbers`, is not modified.
 
-In place reversal is usually faster than temporary reversal. On the other hand, temporary reversal is safer because it does not modify the original list. In addition, temporary reversal is _lazy_, meaning it does not perform any work until it is needed.
+In place reversal is usually more efficient than temporary reversal. On the other hand, temporary reversal is safer because it does not modify the original list. In addition, temporary reversal is _lazy_, meaning it does not perform any work until it is needed.

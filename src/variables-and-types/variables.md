@@ -4,7 +4,7 @@ In the [previous chapter](../getting-started/hello-world.md) we wrote a simple p
 
 Now we'll rewrite this program using variables.
 
-File: `hello-world.py`
+File: `hello_world.py`
 
 ```py
 {{#include ../../listings/variables-and-types/hello_world.py:start}}
@@ -13,7 +13,7 @@ File: `hello-world.py`
 As before, we can run this program by typing,
 
 ```sh
-$ python hello-world.py
+$ python hello_world.py
 ```
 
 in the shell. As before, the program will print the message
@@ -28,12 +28,12 @@ to the screen.
 >
 > ```sh
 > $ conda activate pyintro
-> $ python hello-world.py
+> $ python hello_world.py
 > ```
 >
 > This will be our way of running Python programs in this book. And we won't remind you about it in the future.
 
-So if the program does the same thing as before, what's the point of writing it in a different way? Before we answer this question, let's take a closer look at the program.
+So if the program does the same thing as before, what's the point of writing it in a different way? Before we answer this question, let's take a closer look at the program itself.
 
 The first line of the program declares a variable:
 
@@ -73,7 +73,7 @@ One important propery of a variable, which might not be obvious from the example
 
 (note the `: str` part after variable name).
 
-This is called _type hint_. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. However, it is a good practice to do so, because it makes the code easier to read and understand. Also different tools can use type hints to provide additional help when writing the code.
+This is called _type annotation_. We will prefer to call it _type hint_, because it is not enforced by the Python interpreter. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. However, it is a good practice to do so, because it makes the code easier to read and understand. Also VS Code uses type hints to provide additional help when writing code.
 
 In the rest of the book, we will use type hints in almost all examples. Though, you can omit them at the beginning, if you find them confusing.
 
