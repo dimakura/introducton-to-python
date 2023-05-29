@@ -1,7 +1,5 @@
-from typing import List
-
 # ANCHOR: start
-list: List[int] = [1, 2, 3, 1, 5, 1]
+list = [1, 2, 3, 1, 5, 1]
 print(list)
 list.remove(1)
 print(list)

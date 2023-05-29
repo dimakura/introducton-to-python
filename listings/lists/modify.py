@@ -1,7 +1,5 @@
-from typing import List
-
 # ANCHOR: list
-numbers: List[int] = [1, 2, 3, 4, 5]
+numbers = [1, 2, 3, 4, 5]
 print(numbers)
 # ANCHOR_END: list
 
