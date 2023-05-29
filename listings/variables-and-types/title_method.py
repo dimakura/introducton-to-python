@@ -1,2 +1,2 @@
-name: str = "linus torvalds"
+name = "linus torvalds"
 print(name.title())

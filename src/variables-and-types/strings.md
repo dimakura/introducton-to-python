@@ -3,7 +3,7 @@
 In previous section we declared a string variable `message` and printed it to the screen. 
 
 ```py
-{{#include ../../listings/variables-and-types/hello_world.py:typed-var}}
+{{#include ../../listings/variables-and-types/hello_world.py:var}}
 ```
 
 What exactly is a string? A string is a sequence of characters. In the example above, the string `"Hello, World!"` consists of 13 characters: `H`, `e`, `l`, `l`, `o`, `,`, ` `, `W`, `o`, `r`, `l`, `d`, `!`.
