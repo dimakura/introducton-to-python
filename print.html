@@ -292,24 +292,18 @@ HELLO, WORLD!
 <pre><code class="language-py">message: str = &quot;Hello, World!&quot;
 </code></pre>
 <p>(note the <code>: str</code> part after variable name).</p>
-<p>This is called <em>type annotation</em>. We will prefer to call it <em>type hint</em>, because it is not enforced by the Python interpreter. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. However, it is a good practice to do so, because it makes the code easier to read and understand. Also VS Code uses type hints to provide additional help when writing code.</p>
-<p>In the rest of the book, we will use type hints in almost all examples. Though, you can omit them at the beginning, if you find them confusing.</p>
-<p>The rest of the program is the same as before:</p>
-<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
-print(message)
-</code></pre>
-<p>with the same output</p>
-<pre><code class="language-txt">Hello, World!
-</code></pre>
+<p>This is called <em>type annotation</em>. We will prefer to call it <em>type hint</em>, because it is not enforced by the Python interpreter. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. </p>
+<p>However, it is a good practice to do so, because it makes the code easier to read and understand. Also VS Code uses type hints to provide additional help when writing code.</p>
+<p>Please note, that in the example above there was no need to specify the type of the variable, because Python can infer it from the value we assign to it. We will prefer using type hints, when appropriate or for illustrative purposes.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
 <p>In previous section we declared a string variable <code>message</code> and printed it to the screen. </p>
-<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
+<pre><code class="language-py">message = &quot;Hello, World!&quot;
 </code></pre>
 <p>What exactly is a string? A string is a sequence of characters. In the example above, the string <code>&quot;Hello, World!&quot;</code> consists of 13 characters: <code>H</code>, <code>e</code>, <code>l</code>, <code>l</code>, <code>o</code>, <code>,</code>, <code> </code>, <code>W</code>, <code>o</code>, <code>r</code>, <code>l</code>, <code>d</code>, <code>!</code>.</p>
 <p>Strings are one of the most common data types that you'll encounter in Python programs. You can use them to represent names, addresses, messages, and many other kinds of information.</p>
 <p>Strings are easy to recognize in Python programs. They are enclosed in single or double quotes. In previous example we used double quotes, but single quotes are also valid:</p>
-<pre><code class="language-py">message1: str = &quot;Hello, World!&quot;
-message2: str = 'Hello, World!'
+<pre><code class="language-py">message1 = &quot;Hello, World!&quot;
+message2 = 'Hello, World!'
 assert message1 == message2 # make sure they are equal
 </code></pre>
 <p>Both declarations are equivalent.</p>
@@ -331,14 +325,14 @@ C:\Users\John
 </code></pre>
 <h2 id="some-useful-string-methods"><a class="header" href="#some-useful-string-methods">Some Useful String Methods</a></h2>
 <p>Python provides a number of useful methods for working with strings. A method is an action that Python can perform on a piece of data. The dot <code>.</code> after the name of the variable <code>name</code> in the following example tells Python to make the <code>upper()</code> method act on the variable.</p>
-<pre><code class="language-py">name: str = &quot;Linus Torvalds&quot;
+<pre><code class="language-py">name = &quot;Linus Torvalds&quot;
 print(name.upper())
 </code></pre>
 <p>This program produces the following output:</p>
 <pre><code class="language-txt">LINUS TORVALDS
 </code></pre>
 <p>Similarly, the <code>lower()</code> method changes a string to all lowercase:</p>
-<pre><code class="language-py">name: str = &quot;Linus Torvalds&quot;
+<pre><code class="language-py">name = &quot;Linus Torvalds&quot;
 print(name.lower())
 </code></pre>
 <p>with output</p>
@@ -346,7 +340,7 @@ print(name.lower())
 </code></pre>
 <p>One more method, which we'll use a lot in this book, is <code>title()</code>.
 It changes each word to title case, where each word begins with a capital letter:</p>
-<pre><code class="language-py">name: str = &quot;linus torvalds&quot;
+<pre><code class="language-py">name = &quot;linus torvalds&quot;
 print(name.title())
 </code></pre>
 <p>which produces the following output:</p>
@@ -355,9 +349,9 @@ print(name.title())
 <h2 id="string-formatting"><a class="header" href="#string-formatting">String Formatting</a></h2>
 <p>Very often you'll want to combine several strings, for example if you have <code>first_name</code> and <code>last_name</code> variables, you might want to combine them into a single string <code>full_name</code>. Python provides several ways to do this. In this section we'll look at the <code>f-string</code> method.</p>
 <p>Look at the following example:</p>
-<pre><code class="language-py">first_name: str = &quot;linus&quot;
-last_name: str = &quot;torvalds&quot;
-full_name: str = f&quot;{first_name} {last_name}&quot;
+<pre><code class="language-py">first_name = &quot;linus&quot;
+last_name = &quot;torvalds&quot;
+full_name = f&quot;{first_name} {last_name}&quot;
 print(full_name)
 </code></pre>
 <p>and its output:</p>
@@ -365,7 +359,7 @@ print(full_name)
 </code></pre>
 <p>First two lines should be familiar to you, we declare two string variables
 for first and last names. The third line is more interesting</p>
-<pre><code class="language-py">full_name: str = f&quot;{first_name} {last_name}&quot;
+<pre><code class="language-py">full_name = f&quot;{first_name} {last_name}&quot;
 </code></pre>
 <p>Here, we initialize variable with an <em>f-string</em>. The <em>f</em> stands for <em>format</em>.
 An f-string is a string that has an <code>f</code> at the beginning and curly braces <code>{}</code> containing expressions that will be replaced with their values.</p>

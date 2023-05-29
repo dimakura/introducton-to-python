@@ -186,15 +186,9 @@ HELLO, WORLD!
 <pre><code class="language-py">message: str = &quot;Hello, World!&quot;
 </code></pre>
 <p>(note the <code>: str</code> part after variable name).</p>
-<p>This is called <em>type annotation</em>. We will prefer to call it <em>type hint</em>, because it is not enforced by the Python interpreter. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. However, it is a good practice to do so, because it makes the code easier to read and understand. Also VS Code uses type hints to provide additional help when writing code.</p>
-<p>In the rest of the book, we will use type hints in almost all examples. Though, you can omit them at the beginning, if you find them confusing.</p>
-<p>The rest of the program is the same as before:</p>
-<pre><code class="language-py">message: str = &quot;Hello, World!&quot;
-print(message)
-</code></pre>
-<p>with the same output</p>
-<pre><code class="language-txt">Hello, World!
-</code></pre>
+<p>This is called <em>type annotation</em>. We will prefer to call it <em>type hint</em>, because it is not enforced by the Python interpreter. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. </p>
+<p>However, it is a good practice to do so, because it makes the code easier to read and understand. Also VS Code uses type hints to provide additional help when writing code.</p>
+<p>Please note, that in the example above there was no need to specify the type of the variable, because Python can infer it from the value we assign to it. We will prefer using type hints, when appropriate or for illustrative purposes.</p>
 
                     </main>
 
