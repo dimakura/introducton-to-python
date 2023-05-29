@@ -1,4 +1,4 @@
-first_name: str = "linus"
-last_name: str = "torvalds"
-full_name: str = f"{first_name} {last_name}"
+first_name = "linus"
+last_name = "torvalds"
+full_name = f"{first_name} {last_name}"
 print(full_name)

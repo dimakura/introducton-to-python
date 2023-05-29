@@ -73,18 +73,8 @@ One important propery of a variable, which might not be obvious from the example
 
 (note the `: str` part after variable name).
 
-This is called _type annotation_. We will prefer to call it _type hint_, because it is not enforced by the Python interpreter. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. However, it is a good practice to do so, because it makes the code easier to read and understand. Also VS Code uses type hints to provide additional help when writing code.
+This is called _type annotation_. We will prefer to call it _type hint_, because it is not enforced by the Python interpreter. Python is a dynamically typed language, which means that you don't have to specify the type of the variable when you declare it. And, event if you do, Python will ignore it. 
 
-In the rest of the book, we will use type hints in almost all examples. Though, you can omit them at the beginning, if you find them confusing.
+However, it is a good practice to do so, because it makes the code easier to read and understand. Also VS Code uses type hints to provide additional help when writing code.
 
-The rest of the program is the same as before:
-
-```py
-{{#include ../../listings/variables-and-types/hello_world.py:typed}}
-```
-
-with the same output
-
-```txt
-{{#include ../../listings/variables-and-types/hello_world.out:3}}
-```
+Please note, that in the example above there was no need to specify the type of the variable, because Python can infer it from the value we assign to it. We will prefer using type hints, when appropriate or for illustrative purposes.
