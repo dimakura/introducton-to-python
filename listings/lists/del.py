@@ -1,5 +1,5 @@
 # ANCHOR: var
-a: int = 10
+a = 10
 print(a)
 # ANCHOR_END: var
 

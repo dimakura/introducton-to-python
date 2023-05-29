@@ -1,7 +1,5 @@
-from typing import List
-
 # ANCHOR: start
-names: List[str] = ['Guido', 'Jukka', 'Ivan', 'Tim', 'Raymond']
+names = ['Guido', 'Jukka', 'Ivan', 'Tim', 'Raymond']
 del names[1]  # remove 'Jukka'
 print(names)
 # ANCHOR_END: start

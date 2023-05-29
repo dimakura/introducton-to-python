@@ -22,22 +22,27 @@ else:
 age = 20
 country = 'Singapore'
 countries_21 = ['Cameroon', 'Malaysia', 'Oman',
-                'Samoa', 'Singapore', 'Tokelau', 'Tonga']
+                'Samoa', 'Singapore', 'Tokelau',
+                'Tonga']
 
 if age < 21 and country in countries_21:
     print(f'In {country}, you must be 21 to vote')
 else:
     print('You are eligible to vote!')
-# ANCHOR: v3
+# ANCHOR_END: v3
 
 # ANCHOR: v4
-car = 'Toyota'
-
 awesome_cars = ['BMW', 'Porsche']
 expensive_cars = ['Mercedes', 'Rolls Royce']
 fast_cars = ['Ferrari', 'Bugatti']
 
-if car not in awesome_cars and car not in expensive_cars and car not in fast_cars:
+car = 'Toyota'
+
+not_awesome = car not in awesome_cars
+not_expensive = car not in expensive_cars
+not_fast = car not in fast_cars
+
+if not_awesome and not_expensive and not_fast:
     print('This car is boring!')
 # ANCHOR_END: v4
 

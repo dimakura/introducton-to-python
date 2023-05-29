@@ -1,7 +1,5 @@
-from typing import List
-
 # ANCHOR: start
-languages: List[str] = ['Python', 'C++']
+languages = ['Python', 'C++']
 print(languages)
 # ANCHOR_END: start
 

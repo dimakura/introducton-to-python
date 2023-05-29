@@ -1,5 +1,5 @@
 # ANCHOR: equality
-car: str = 'Bmw'
+car = 'Bmw'
 print(car == 'Bmw')
 # ANCHOR_END: equality
 

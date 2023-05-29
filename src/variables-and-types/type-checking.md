@@ -9,7 +9,7 @@ If you are not sure what type a variable is, you can ask Python to tell you. For
 which will print:
 
 ```txt
-{{#include ../../listings/variables-and-types/typechecking.out}}
+{{#include ../../listings/variables-and-types/typechecking.out:1:3}}
 ```
 
 Related to `type()` is the `isinstance()` function, which can be used to check if a variable is of a certain type:

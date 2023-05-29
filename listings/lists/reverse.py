@@ -1,7 +1,5 @@
-from typing import List
-
 # ANCHOR: reverse
-numbers: List[int] = list(range(1, 6))
+numbers = list(range(1, 6))
 print(numbers)
 
 numbers.reverse() # reverse the list
