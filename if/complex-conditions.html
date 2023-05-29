@@ -161,11 +161,16 @@ False
 False
 </code></pre>
 <p>Let's check when this might be useful:</p>
-<p>File: <code>vote-by-country.py</code>:</p>
-<pre><code class="language-py">{{#include ../../listings/if-statement/vote-by-country.py:v1}}
+<pre><code class="language-py">age = 20
+country = 'Cameroon'
+
+if age &lt; 21 and country == 'Cameroon':
+    print('In Cameroon, you must be 21 to vote')
+else:
+    print('You are eligible to vote!')
 </code></pre>
 <p>which gives:</p>
-<pre><code class="language-txt">{{#include ../../listings/if-statement/vote-by-country.out:1}}
+<pre><code class="language-txt">In Cameroon, you must be 21 to vote
 </code></pre>
 <p>In this example, we specify the value of <code>age</code> to be <code>20</code>, which is enough to vote in almost any country. But in Cameroon, the voting age starts from <code>21</code>.</p>
 <h2 id="or-operator"><a class="header" href="#or-operator"><code>or</code> Operator</a></h2>
@@ -183,10 +188,16 @@ True
 False
 </code></pre>
 <p>Continuing with the previous example, Cameroon is not the only country with a voting age of <code>21</code>. For example, the same is true for Malaysia. Let's add this to our conditon:</p>
-<pre><code class="language-py">{{#include ../../listings/if-statement/vote-by-country.py:v2}}
+<pre><code class="language-py">age = 20
+country = 'Malaysia'
+
+if age &lt; 21 and (country == 'Cameroon' or country == 'Malaysia'):
+    print('In Cameroon and Malaysia, you must be 21 to vote')
+else:
+    print('You are eligible to vote!')
 </code></pre>
 <p>which gives:</p>
-<pre><code class="language-txt">{{#include ../../listings/if-statement/vote-by-country.out:2}}
+<pre><code class="language-txt">In Cameroon and Malaysia, you must be 21 to vote
 </code></pre>
 <p>Note that we used parentheses to group the conditions. This ensures that the <code>or</code> operator is evaluated first (within parentheses), and then the <code>and</code> operator.</p>
 

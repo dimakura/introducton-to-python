@@ -471,12 +471,6 @@ print(type(z))
 <pre><code class="language-txt">&lt;class 'int'&gt;
 &lt;class 'float'&gt;
 &lt;class 'str'&gt;
-True
-True
-True
-False
-False
-False
 </code></pre>
 <p>Related to <code>type()</code> is the <code>isinstance()</code> function, which can be used to check if a variable is of a certain type:</p>
 <pre><code class="language-py">print(isinstance(x, int))
@@ -623,7 +617,7 @@ IndexError: list index out of range
 <p>It's often necessary to modify lists after they've been created. You can easily add to or remove items from a list, and you can modify individual items in a list as well.</p>
 <h2 id="adding-elements-to-a-list"><a class="header" href="#adding-elements-to-a-list">Adding Elements to a List</a></h2>
 <p>We begin with a list of favorite programming languages,</p>
-<pre><code class="language-py">languages: List[str] = ['Python', 'C++']
+<pre><code class="language-py">languages = ['Python', 'C++']
 print(languages)
 </code></pre>
 <p>which produces the following output:</p>
@@ -656,7 +650,7 @@ print(languages)
 <p>There are two main ways to go about this task, depending on whether you know the position of the item you want to remove or you know its value.</p>
 <p>Let's begin with the case where you know the position of the item you want to remove. You can use <code>pop()</code> method for this.</p>
 <p>Let's see an example:</p>
-<pre><code class="language-py">numbers: List[int] = [1, 2, 3, 4, 5]
+<pre><code class="language-py">numbers = [1, 2, 3, 4, 5]
 
 print(numbers)         # original list
 print(numbers.pop())   # removing last element
@@ -684,7 +678,7 @@ print(numbers)
 This method is useful when you know the value of the item you want to remove from the list.
 The <code>remove()</code> method deletes only the first occurrence of the value you specify.
 Check this in action:</p>
-<pre><code class="language-py">list: List[int] = [1, 2, 3, 1, 5, 1]
+<pre><code class="language-py">list = [1, 2, 3, 1, 5, 1]
 print(list)
 list.remove(1)
 print(list)
@@ -706,7 +700,7 @@ print(list)
 <p>If we try to remove element which is not in the list that would produce an error.</p>
 <h2 id="clearing-a-list"><a class="header" href="#clearing-a-list">Clearing a List</a></h2>
 <p>If you want to remove everything from a list, you can use the <code>clear()</code> method. For example,</p>
-<pre><code class="language-py">quarter: List[str] = ['january', 'february', 'march']
+<pre><code class="language-py">quarter = ['january', 'february', 'march']
 quarter.clear()
 print(quarter)
 </code></pre>
@@ -716,7 +710,7 @@ print(quarter)
 <h2 id="modifying-elements-in-a-list"><a class="header" href="#modifying-elements-in-a-list">Modifying Elements in a List</a></h2>
 <p>It's possible to modify elements in a list by assigning new values to them. Let's see an example:</p>
 <p>File: <code>modify.py</code></p>
-<pre><code class="language-py">numbers: List[int] = [1, 2, 3, 4, 5]
+<pre><code class="language-py">numbers = [1, 2, 3, 4, 5]
 print(numbers)
 </code></pre>
 <p>Here we create a new list of integers and output it to the console:</p>
@@ -742,7 +736,7 @@ print(numbers)
 <h2 id="deleting-a-variable"><a class="header" href="#deleting-a-variable">Deleting a Variable</a></h2>
 <p>We've already seen how to declare a variable.</p>
 <p>Filename: <code>del.py</code></p>
-<pre><code class="language-py">a: int = 10
+<pre><code class="language-py">a = 10
 print(a)
 </code></pre>
 <p>This outputs a number:</p>
@@ -764,7 +758,7 @@ NameError: name 'a' is not defined
 <h2 id="delete-an-item-from-a-list"><a class="header" href="#delete-an-item-from-a-list">Delete an Item from a List</a></h2>
 <p>You can use <code>del</code> to delete an item from a list. This looks pretty much like <code>pop()</code> method which we discussed in the <a href="lists/./modifying-lists.html#removing-elements-from-a-list">previous section</a>, but <code>del</code> does not return the deleted item.</p>
 <p>Filename: <code>del_list.py</code></p>
-<pre><code class="language-py">names: List[str] = ['Guido', 'Jukka', 'Ivan', 'Tim', 'Raymond']
+<pre><code class="language-py">names = ['Guido', 'Jukka', 'Ivan', 'Tim', 'Raymond']
 del names[1]  # remove 'Jukka'
 print(names)
 </code></pre>
@@ -783,7 +777,7 @@ print(names)
 <div style="break-before: page; page-break-before: always;"></div><h1 id="length"><a class="header" href="#length">Length</a></h1>
 <p>The <code>len()</code> function returns the number of elements in a list.</p>
 <p>File: <code>len.py</code></p>
-<pre><code class="language-py">cars: List[str] = ['bmw', 'mercedes', 'audi', 'subaru']
+<pre><code class="language-py">cars = ['bmw', 'mercedes', 'audi', 'subaru']
 print(len(cars))
 </code></pre>
 <p>which prints length of the list to the console</p>
@@ -791,7 +785,7 @@ print(len(cars))
 </code></pre>
 <p>We can use the <code>len()</code> function to determine length of other data types different from lists. For example, we can determine the length of a string.</p>
 <p>File: <code>len.py</code></p>
-<pre><code class="language-py">car: str = 'bmw'
+<pre><code class="language-py">car = 'bmw'
 print(len(car))
 </code></pre>
 <p>produces</p>
@@ -799,11 +793,11 @@ print(len(car))
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sorting"><a class="header" href="#sorting">Sorting</a></h1>
 <p>In this section we will use the following list or unordered numbers:</p>
-<pre><code class="language-py">numbers: List[int] = [7, 8, 1, 6, 5, 4, 3, 2, 10, 9]
+<pre><code class="language-py">numbers = [7, 8, 1, 6, 5, 4, 3, 2, 10, 9]
 </code></pre>
 <p>What if we want to sort the list in ascending order? There are two ways to sort a list: temporarily and permanently.</p>
 <p>During temporary sorting, the original list is not modified and a sorted copy is returned. Temporary sorting is done using the <code>sorted()</code> function.</p>
-<pre><code class="language-py">sorted_numbes: List[int] = sorted(numbers) # sorted copy
+<pre><code class="language-py">sorted_numbes = sorted(numbers) # sorted copy
 print(sorted_numbes) # print sorted numbers
 print(numbers)       # print original list
 </code></pre>
@@ -823,7 +817,7 @@ print(numbers)
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reverse-order"><a class="header" href="#reverse-order">Reverse Order</a></h1>
 <p>You can reverse the order of a list by calling the <code>reverse()</code> method on the list. This method changes the order of the list permanently, but you can revert to the original order anytime by applying <code>reverse()</code> to the same list a second time.</p>
 <p>File: <code>reverse.py</code>:</p>
-<pre><code class="language-py">numbers: List[int] = list(range(1, 6))
+<pre><code class="language-py">numbers = list(range(1, 6))
 print(numbers)
 
 numbers.reverse() # reverse the list
@@ -877,7 +871,7 @@ else:
 <p>We can test whether two strings are equal by using the equality operator <code>==</code>. Note that the equality operator is different from the assignment operator <code>=</code>.</p>
 <p>Let's start with a simple example:</p>
 <p>File: <code>strings.py</code>:</p>
-<pre><code class="language-py">car: str = 'Bmw'
+<pre><code class="language-py">car = 'Bmw'
 print(car == 'Bmw')
 </code></pre>
 <p>which produces:</p>
@@ -1029,11 +1023,16 @@ False
 False
 </code></pre>
 <p>Let's check when this might be useful:</p>
-<p>File: <code>vote-by-country.py</code>:</p>
-<pre><code class="language-py">{{#include ../../listings/if-statement/vote-by-country.py:v1}}
+<pre><code class="language-py">age = 20
+country = 'Cameroon'
+
+if age &lt; 21 and country == 'Cameroon':
+    print('In Cameroon, you must be 21 to vote')
+else:
+    print('You are eligible to vote!')
 </code></pre>
 <p>which gives:</p>
-<pre><code class="language-txt">{{#include ../../listings/if-statement/vote-by-country.out:1}}
+<pre><code class="language-txt">In Cameroon, you must be 21 to vote
 </code></pre>
 <p>In this example, we specify the value of <code>age</code> to be <code>20</code>, which is enough to vote in almost any country. But in Cameroon, the voting age starts from <code>21</code>.</p>
 <h2 id="or-operator"><a class="header" href="#or-operator"><code>or</code> Operator</a></h2>
@@ -1051,10 +1050,16 @@ True
 False
 </code></pre>
 <p>Continuing with the previous example, Cameroon is not the only country with a voting age of <code>21</code>. For example, the same is true for Malaysia. Let's add this to our conditon:</p>
-<pre><code class="language-py">{{#include ../../listings/if-statement/vote-by-country.py:v2}}
+<pre><code class="language-py">age = 20
+country = 'Malaysia'
+
+if age &lt; 21 and (country == 'Cameroon' or country == 'Malaysia'):
+    print('In Cameroon and Malaysia, you must be 21 to vote')
+else:
+    print('You are eligible to vote!')
 </code></pre>
 <p>which gives:</p>
-<pre><code class="language-txt">{{#include ../../listings/if-statement/vote-by-country.out:2}}
+<pre><code class="language-txt">In Cameroon and Malaysia, you must be 21 to vote
 </code></pre>
 <p>Note that we used parentheses to group the conditions. This ensures that the <code>or</code> operator is evaluated first (within parentheses), and then the <code>and</code> operator.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="list-conditionals"><a class="header" href="#list-conditionals">List conditionals</a></h1>
@@ -1068,48 +1073,30 @@ False
 <pre><code class="language-py">age = 20
 country = 'Singapore'
 countries_21 = ['Cameroon', 'Malaysia', 'Oman',
-                'Samoa', 'Singapore', 'Tokelau', 'Tonga']
+                'Samoa', 'Singapore', 'Tokelau',
+                'Tonga']
 
 if age &lt; 21 and country in countries_21:
     print(f'In {country}, you must be 21 to vote')
 else:
     print('You are eligible to vote!')
-
-car = 'Toyota'
-
-awesome_cars = ['BMW', 'Porsche']
-expensive_cars = ['Mercedes', 'Rolls Royce']
-fast_cars = ['Ferrari', 'Bugatti']
-
-if car not in awesome_cars and car not in expensive_cars and car not in fast_cars:
-    print('This car is boring!')
-
-cars = []
-
-if cars:
-    print(f'You have {len(cars)} cars!')
-else:
-    print('You have no cars!')
-
-cars = ['BMW', 'Porsche']
-
-if cars:
-    print(f'You have {len(cars)} cars!')
-else:
-    print('You have no cars!')
 </code></pre>
 <p>which produces:</p>
 <pre><code class="language-txt">In Singapore, you must be 21 to vote
 </code></pre>
 <h2 id="not-in-operator"><a class="header" href="#not-in-operator"><code>not in</code> operator</a></h2>
 <p>We can also check if a value is not in a list using <code>not in</code> operator. Here's an example:</p>
-<pre><code class="language-py">car = 'Toyota'
-
-awesome_cars = ['BMW', 'Porsche']
+<pre><code class="language-py">awesome_cars = ['BMW', 'Porsche']
 expensive_cars = ['Mercedes', 'Rolls Royce']
 fast_cars = ['Ferrari', 'Bugatti']
 
-if car not in awesome_cars and car not in expensive_cars and car not in fast_cars:
+car = 'Toyota'
+
+not_awesome = car not in awesome_cars
+not_expensive = car not in expensive_cars
+not_fast = car not in fast_cars
+
+if not_awesome and not_expensive and not_fast:
     print('This car is boring!')
 </code></pre>
 <p>which indeed tells us:</p>

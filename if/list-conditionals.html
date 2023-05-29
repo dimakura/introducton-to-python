@@ -155,48 +155,30 @@
 <pre><code class="language-py">age = 20
 country = 'Singapore'
 countries_21 = ['Cameroon', 'Malaysia', 'Oman',
-                'Samoa', 'Singapore', 'Tokelau', 'Tonga']
+                'Samoa', 'Singapore', 'Tokelau',
+                'Tonga']
 
 if age &lt; 21 and country in countries_21:
     print(f'In {country}, you must be 21 to vote')
 else:
     print('You are eligible to vote!')
-
-car = 'Toyota'
-
-awesome_cars = ['BMW', 'Porsche']
-expensive_cars = ['Mercedes', 'Rolls Royce']
-fast_cars = ['Ferrari', 'Bugatti']
-
-if car not in awesome_cars and car not in expensive_cars and car not in fast_cars:
-    print('This car is boring!')
-
-cars = []
-
-if cars:
-    print(f'You have {len(cars)} cars!')
-else:
-    print('You have no cars!')
-
-cars = ['BMW', 'Porsche']
-
-if cars:
-    print(f'You have {len(cars)} cars!')
-else:
-    print('You have no cars!')
 </code></pre>
 <p>which produces:</p>
 <pre><code class="language-txt">In Singapore, you must be 21 to vote
 </code></pre>
 <h2 id="not-in-operator"><a class="header" href="#not-in-operator"><code>not in</code> operator</a></h2>
 <p>We can also check if a value is not in a list using <code>not in</code> operator. Here's an example:</p>
-<pre><code class="language-py">car = 'Toyota'
-
-awesome_cars = ['BMW', 'Porsche']
+<pre><code class="language-py">awesome_cars = ['BMW', 'Porsche']
 expensive_cars = ['Mercedes', 'Rolls Royce']
 fast_cars = ['Ferrari', 'Bugatti']
 
-if car not in awesome_cars and car not in expensive_cars and car not in fast_cars:
+car = 'Toyota'
+
+not_awesome = car not in awesome_cars
+not_expensive = car not in expensive_cars
+not_fast = car not in fast_cars
+
+if not_awesome and not_expensive and not_fast:
     print('This car is boring!')
 </code></pre>
 <p>which indeed tells us:</p>

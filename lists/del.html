@@ -149,7 +149,7 @@
 <h2 id="deleting-a-variable"><a class="header" href="#deleting-a-variable">Deleting a Variable</a></h2>
 <p>We've already seen how to declare a variable.</p>
 <p>Filename: <code>del.py</code></p>
-<pre><code class="language-py">a: int = 10
+<pre><code class="language-py">a = 10
 print(a)
 </code></pre>
 <p>This outputs a number:</p>
@@ -171,7 +171,7 @@ NameError: name 'a' is not defined
 <h2 id="delete-an-item-from-a-list"><a class="header" href="#delete-an-item-from-a-list">Delete an Item from a List</a></h2>
 <p>You can use <code>del</code> to delete an item from a list. This looks pretty much like <code>pop()</code> method which we discussed in the <a href="./modifying-lists.html#removing-elements-from-a-list">previous section</a>, but <code>del</code> does not return the deleted item.</p>
 <p>Filename: <code>del_list.py</code></p>
-<pre><code class="language-py">names: List[str] = ['Guido', 'Jukka', 'Ivan', 'Tim', 'Raymond']
+<pre><code class="language-py">names = ['Guido', 'Jukka', 'Ivan', 'Tim', 'Raymond']
 del names[1]  # remove 'Jukka'
 print(names)
 </code></pre>

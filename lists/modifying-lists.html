@@ -148,7 +148,7 @@
 <p>It's often necessary to modify lists after they've been created. You can easily add to or remove items from a list, and you can modify individual items in a list as well.</p>
 <h2 id="adding-elements-to-a-list"><a class="header" href="#adding-elements-to-a-list">Adding Elements to a List</a></h2>
 <p>We begin with a list of favorite programming languages,</p>
-<pre><code class="language-py">languages: List[str] = ['Python', 'C++']
+<pre><code class="language-py">languages = ['Python', 'C++']
 print(languages)
 </code></pre>
 <p>which produces the following output:</p>
@@ -181,7 +181,7 @@ print(languages)
 <p>There are two main ways to go about this task, depending on whether you know the position of the item you want to remove or you know its value.</p>
 <p>Let's begin with the case where you know the position of the item you want to remove. You can use <code>pop()</code> method for this.</p>
 <p>Let's see an example:</p>
-<pre><code class="language-py">numbers: List[int] = [1, 2, 3, 4, 5]
+<pre><code class="language-py">numbers = [1, 2, 3, 4, 5]
 
 print(numbers)         # original list
 print(numbers.pop())   # removing last element
@@ -209,7 +209,7 @@ print(numbers)
 This method is useful when you know the value of the item you want to remove from the list.
 The <code>remove()</code> method deletes only the first occurrence of the value you specify.
 Check this in action:</p>
-<pre><code class="language-py">list: List[int] = [1, 2, 3, 1, 5, 1]
+<pre><code class="language-py">list = [1, 2, 3, 1, 5, 1]
 print(list)
 list.remove(1)
 print(list)
@@ -231,7 +231,7 @@ print(list)
 <p>If we try to remove element which is not in the list that would produce an error.</p>
 <h2 id="clearing-a-list"><a class="header" href="#clearing-a-list">Clearing a List</a></h2>
 <p>If you want to remove everything from a list, you can use the <code>clear()</code> method. For example,</p>
-<pre><code class="language-py">quarter: List[str] = ['january', 'february', 'march']
+<pre><code class="language-py">quarter = ['january', 'february', 'march']
 quarter.clear()
 print(quarter)
 </code></pre>
@@ -241,7 +241,7 @@ print(quarter)
 <h2 id="modifying-elements-in-a-list"><a class="header" href="#modifying-elements-in-a-list">Modifying Elements in a List</a></h2>
 <p>It's possible to modify elements in a list by assigning new values to them. Let's see an example:</p>
 <p>File: <code>modify.py</code></p>
-<pre><code class="language-py">numbers: List[int] = [1, 2, 3, 4, 5]
+<pre><code class="language-py">numbers = [1, 2, 3, 4, 5]
 print(numbers)
 </code></pre>
 <p>Here we create a new list of integers and output it to the console:</p>

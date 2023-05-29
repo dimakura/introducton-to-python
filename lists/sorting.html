@@ -146,11 +146,11 @@
                     <main>
                         <h1 id="sorting"><a class="header" href="#sorting">Sorting</a></h1>
 <p>In this section we will use the following list or unordered numbers:</p>
-<pre><code class="language-py">numbers: List[int] = [7, 8, 1, 6, 5, 4, 3, 2, 10, 9]
+<pre><code class="language-py">numbers = [7, 8, 1, 6, 5, 4, 3, 2, 10, 9]
 </code></pre>
 <p>What if we want to sort the list in ascending order? There are two ways to sort a list: temporarily and permanently.</p>
 <p>During temporary sorting, the original list is not modified and a sorted copy is returned. Temporary sorting is done using the <code>sorted()</code> function.</p>
-<pre><code class="language-py">sorted_numbes: List[int] = sorted(numbers) # sorted copy
+<pre><code class="language-py">sorted_numbes = sorted(numbers) # sorted copy
 print(sorted_numbes) # print sorted numbers
 print(numbers)       # print original list
 </code></pre>
