@@ -80,3 +80,12 @@ def test_if_outputs():
     output_verification('if-statement/if-else')
     output_verification('if-statement/if-elif-else')
     output_verification('if-statement/list')
+
+
+def test_loops_output():
+    output_verification('loops/animals')
+    output_verification('loops/squares')
+    output_verification('loops/sum')
+    output_verification('loops/min-max')
+    output_verification('loops/built-in')
+    output_verification('loops/while-loop')
