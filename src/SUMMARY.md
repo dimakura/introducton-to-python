@@ -31,7 +31,12 @@
   - [List conditionals](./if/list-conditionals.md)
   - [Negation](./if/negation.md)
 
-- [Loops]()
+- [Loops](./loops/README.md)
+  - [For Loop](./loops/for-loop.md)
+  - [Range Loop](./loops/range.md)
+  - [Stats](./loops/stats.md)
+  - [Comprehensions](./loops/comprehensions.md)
+  - [While Loop](./loops/while-loop.md)
 
 - [More Data Types]()
 
