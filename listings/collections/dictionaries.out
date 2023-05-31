@@ -1,0 +1,15 @@
+{'Python': 'Readable', 'C++': 'Fast', 'Java': 'Reliable', 'Rust': 'Safe'}
+Readable
+Fast
+Reliable
+Safe
+Readable
+True
+Fun
+True
+False
+Traceback (most recent call last):
+  File "dictionaries.py", line 25, in <module>
+    print(languages['C'])
+          ~~~~~~~~~^^^^^
+KeyError: 'C'

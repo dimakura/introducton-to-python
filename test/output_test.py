@@ -89,3 +89,12 @@ def test_loops_output():
     output_verification('loops/min-max')
     output_verification('loops/built-in')
     output_verification('loops/while-loop')
+
+
+def test_collections_output():
+    output_verification('collections/tuples')
+    output_verification('collections/tuples2')
+    output_verification('collections/dictionaries')
+    output_verification('collections/dictionary_loop')
+    output_verification('collections/dictionary_change')
+    output_verification('collections/sets')

@@ -39,7 +39,11 @@
   - [Comprehensions](./loops/comprehensions.md)
   - [While Loop](./loops/while-loop.md)
 
-- [More Data Types]()
+- [Collections](./collections/README.md)
+  - [Tuples](./collections/tuples.md)
+  - [Dictionaries](./collections/dictionaries.md)
+  - [Sets](./collections/sets.md)
+  - [Comprensions](./collections/comprehensions.md)
 
 - [Functions]()
 
