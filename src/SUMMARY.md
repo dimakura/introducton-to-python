@@ -13,6 +13,7 @@
   - [Numbers](./variables-and-types/numbers.md)
   - [Type Checking](./variables-and-types/type-checking.md)
   - [Comments](./variables-and-types/comments.md)
+  - [Exercises](./variables-and-types/exercises.md)
 
 - [Lists](./lists/README.md)
   - [Creating Lists](./lists/creating-lists.md)
