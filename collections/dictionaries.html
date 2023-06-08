@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dictionaries - Introduction to Python</title>
+
+
+        <!-- Custom HTML head -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP60W3BH8P"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP60W3BH8P');
+        </script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../getting-started/index.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../getting-started/python.html"><strong aria-hidden="true">1.1.</strong> Installing Python</a></li><li class="chapter-item expanded "><a href="../getting-started/vscode.html"><strong aria-hidden="true">1.2.</strong> Installing VS Code</a></li><li class="chapter-item expanded "><a href="../getting-started/hello-world.html"><strong aria-hidden="true">1.3.</strong> Hello World</a></li></ol></li><li class="chapter-item expanded "><a href="../variables-and-types/index.html"><strong aria-hidden="true">2.</strong> Variables and Simple Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../variables-and-types/variables.html"><strong aria-hidden="true">2.1.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../variables-and-types/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../variables-and-types/numbers.html"><strong aria-hidden="true">2.3.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="../variables-and-types/type-checking.html"><strong aria-hidden="true">2.4.</strong> Type Checking</a></li><li class="chapter-item expanded "><a href="../variables-and-types/comments.html"><strong aria-hidden="true">2.5.</strong> Comments</a></li><li class="chapter-item expanded "><a href="../variables-and-types/exercises.html"><strong aria-hidden="true">2.6.</strong> Exercises</a></li></ol></li><li class="chapter-item expanded "><a href="../lists/index.html"><strong aria-hidden="true">3.</strong> Lists</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lists/creating-lists.html"><strong aria-hidden="true">3.1.</strong> Creating Lists</a></li><li class="chapter-item expanded "><a href="../lists/accessing-elements.html"><strong aria-hidden="true">3.2.</strong> Accessing Elements</a></li><li class="chapter-item expanded "><a href="../lists/modifying-lists.html"><strong aria-hidden="true">3.3.</strong> Modifying Lists</a></li><li class="chapter-item expanded "><a href="../lists/del.html"><strong aria-hidden="true">3.4.</strong> del Operator</a></li><li class="chapter-item expanded "><a href="../lists/length.html"><strong aria-hidden="true">3.5.</strong> Length</a></li><li class="chapter-item expanded "><a href="../lists/sorting.html"><strong aria-hidden="true">3.6.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="../lists/reverse.html"><strong aria-hidden="true">3.7.</strong> Reverse Order</a></li></ol></li><li class="chapter-item expanded "><a href="../if/index.html"><strong aria-hidden="true">4.</strong> If Statement</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../if/example.html"><strong aria-hidden="true">4.1.</strong> An Example</a></li><li class="chapter-item expanded "><a href="../if/conditional-tests.html"><strong aria-hidden="true">4.2.</strong> Conditional Tests</a></li><li class="chapter-item expanded "><a href="../if/if-statement.html"><strong aria-hidden="true">4.3.</strong> If Statement</a></li><li class="chapter-item expanded "><a href="../if/complex-conditions.html"><strong aria-hidden="true">4.4.</strong> Complex Conditions</a></li><li class="chapter-item expanded "><a href="../if/list-conditionals.html"><strong aria-hidden="true">4.5.</strong> List conditionals</a></li><li class="chapter-item expanded "><a href="../if/negation.html"><strong aria-hidden="true">4.6.</strong> Negation</a></li></ol></li><li class="chapter-item expanded "><a href="../loops/index.html"><strong aria-hidden="true">5.</strong> Loops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../loops/for-loop.html"><strong aria-hidden="true">5.1.</strong> For Loop</a></li><li class="chapter-item expanded "><a href="../loops/range.html"><strong aria-hidden="true">5.2.</strong> Range Loop</a></li><li class="chapter-item expanded "><a href="../loops/stats.html"><strong aria-hidden="true">5.3.</strong> Stats</a></li><li class="chapter-item expanded "><a href="../loops/comprehensions.html"><strong aria-hidden="true">5.4.</strong> Comprehensions</a></li><li class="chapter-item expanded "><a href="../loops/while-loop.html"><strong aria-hidden="true">5.5.</strong> While Loop</a></li></ol></li><li class="chapter-item expanded "><a href="../collections/index.html"><strong aria-hidden="true">6.</strong> Collections</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../collections/tuples.html"><strong aria-hidden="true">6.1.</strong> Tuples</a></li><li class="chapter-item expanded "><a href="../collections/dictionaries.html" class="active"><strong aria-hidden="true">6.2.</strong> Dictionaries</a></li><li class="chapter-item expanded "><a href="../collections/sets.html"><strong aria-hidden="true">6.3.</strong> Sets</a></li><li class="chapter-item expanded "><a href="../collections/comprehensions.html"><strong aria-hidden="true">6.4.</strong> Comprensions</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Classes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Exceptions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> I/O</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Introduction to Python</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="dictionaries"><a class="header" href="#dictionaries">Dictionaries</a></h1>
+<p>Dictionary is a collection of key-value pairs. Each key is connected to a value, and you can use a key to access the value associated with that key.</p>
+<h2 id="creating-a-dictionary"><a class="header" href="#creating-a-dictionary">Creating a Dictionary</a></h2>
+<p>To define a dictionary, you use curly braces <code>{}</code> to indicate the beginning and end of the dictionary, and use <code>:</code> to separate keys and values. A simple dictionary looks like this:</p>
+<pre><code class="language-python">languages = {'Python': 'Readable', 'C++': 'Fast', 'Java': 'Reliable', 'Rust': 'Safe'}
+print(languages)
+</code></pre>
+<p>which produces the following output:</p>
+<pre><code class="language-text">{'Python': 'Readable', 'C++': 'Fast', 'Java': 'Reliable', 'Rust': 'Safe'}
+</code></pre>
+<p>Note that after Python 3.6, the order of the key-value pairs is preserved. In earlier versions of Python, the order of the key-value pairs is not preserved.</p>
+<p>Also note that the keys in a dictionary must be unique. If you use the same key twice, the second key-value pair will overwrite the first one.</p>
+<h2 id="accessing-values"><a class="header" href="#accessing-values">Accessing Values</a></h2>
+<p>To get the value associated with a key, give the name of the dictionary and then place the key inside a set of square brackets <code>[]</code>. For example, the following snippet</p>
+<pre><code class="language-python">print(languages['Python'])
+print(languages['C++'])
+print(languages['Java'])
+print(languages['Rust'])
+</code></pre>
+<p>produces an output:</p>
+<pre><code class="language-text">Readable
+Fast
+Reliable
+Safe
+</code></pre>
+<p>If we try to access a key that doesn't exist in a dictionary</p>
+<pre><code class="language-python">print(languages['C'])
+</code></pre>
+<p>Python will raise an error:</p>
+<pre><code class="language-text">    print(languages['C'])
+          ~~~~~~~~~^^^^^
+KeyError: 'C'
+</code></pre>
+<p>If this is an issue, there's another way to access a value in a dictionary. The <code>get()</code> method returns <code>None</code> if the key doesn't exist in the dictionary. You can also specify a default value to use if the key doesn't exist.</p>
+<pre><code class="language-python">print(languages.get('Python'))     # same as languages['Python']
+print(languages.get('C') is None)  # key &quot;C&quot; does not exist
+print(languages.get('C', 'Fun'))   # returns &quot;Fun&quot;
+</code></pre>
+<p>If you need to check whether dictionary has a particular key, you can use the <code>in</code> operator.</p>
+<pre><code class="language-python">print('Python' in languages) # True
+print('C' in languages)      # False
+</code></pre>
+<h2 id="looping-through-a-dictionary"><a class="header" href="#looping-through-a-dictionary">Looping Through a Dictionary</a></h2>
+<p>It's very common to loop through all key-value pairs in a dictionary.</p>
+<p>Below is an example of using <code>for</code> loop. Notice that the <code>language</code> variable gets the successive keys in the dictionary as the loop moves through the dictionary.</p>
+<pre><code class="language-python">for language in languages:
+    print(f&quot;{language} is {languages[language].lower()}&quot;)
+</code></pre>
+<p>And this the output:</p>
+<pre><code class="language-text">Python is readable
+C++ is fast
+Java is reliable
+Rust is safe
+</code></pre>
+<p>Because it's common to use both key and value of a dictionary while looping through it, Python provides a special method called <code>items()</code> that returns a list of key-value pairs. In the following example, we use <code>items()</code> to loop through the dictionary and do the same thing as the previous example.</p>
+<pre><code class="language-python">for language, quality in languages.items():
+    print(f&quot;{language} is {quality.lower()}&quot;)
+</code></pre>
+<p>The <code>keys()</code> method returns a list of all keys in a dictionary. The <code>values()</code> method returns a list of all values in a dictionary. These two methods can be used in variour ways. For example, you can loop through keys in sorted order:</p>
+<pre><code class="language-python">for language in sorted(languages.keys()):
+    print(f&quot;{language} is {languages[language].lower()}&quot;)
+</code></pre>
+<p>Which produces almost the same output as the previous examples, except that the languages are now sorted:</p>
+<pre><code class="language-text">C++ is fast
+Java is reliable
+Python is readable
+Rust is safe
+</code></pre>
+<h2 id="change-dictionaries"><a class="header" href="#change-dictionaries">Change Dictionaries</a></h2>
+<p>It's fairly easy to change dictionaries. You can add new key-value pairs, modify existing key-value pairs, and remove key-value pairs.</p>
+<p>The following example creates an empty dictionary and adds key-value pairs to it. In tnis case we add names of students as keys and their yearly points as values.</p>
+<pre><code class="language-python">students = {}
+
+students['Alice'] = 20 # {'Alice': 20}
+students['Bob'] = 19   # {'Alice': 20, 'Bob': 19}
+</code></pre>
+<p>Another way to add or change key-value pairs in a dictionary is to use the <code>update()</code> method. The <code>update()</code> method takes a dictionary as an argument and adds all key-value pairs from that dictionary to the current dictionary. If the key already exists, the value associated with that key is replaced.</p>
+<pre><code class="language-python">students.update({'Alice': 22, 'Charlie': 25, 'Daniel': 23})
+</code></pre>
+<p>If we print <code>students</code> dictionary now, we'll see that the argument dictionary was added to the <code>students</code> dictionary.</p>
+<pre><code class="language-text">{'Alice': 22, 'Bob': 19, 'Charlie': 25, 'Daniel': 23}
+</code></pre>
+<p>If we need to remove items from a dictionary, there are few ways to do it. The <code>popitem()</code> mehtod removes the last key-value pair from a dictionary and returns it as a tuple.</p>
+<pre><code class="language-python">print(students.popitem())
+# =&gt; ('Daniel', 23)
+</code></pre>
+<p>The <code>pop()</code> method removes a key-value pair from a dictionary and returns the value associated with the key. If the key doesn't exist, the method returns the default value specified as the second argument (or fails with error).</p>
+<pre><code class="language-python">print(students.pop('Bob', 33)) # =&gt; 19 (Bob's points)
+print(students.pop('Bob', 33)) # =&gt; 33 (default value)
+</code></pre>
+<p>The <code>del</code> statement removes a key-value pair from a dictionary.</p>
+<pre><code class="language-python">del students['Charlie']
+</code></pre>
+<p>And, finally, the <code>clear()</code> method removes all key-value pairs from a dictionary.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../collections/tuples.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../collections/sets.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../collections/tuples.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../collections/sets.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

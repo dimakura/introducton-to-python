@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Sets - Introduction to Python</title>
+
+
+        <!-- Custom HTML head -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP60W3BH8P"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP60W3BH8P');
+        </script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../getting-started/index.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../getting-started/python.html"><strong aria-hidden="true">1.1.</strong> Installing Python</a></li><li class="chapter-item expanded "><a href="../getting-started/vscode.html"><strong aria-hidden="true">1.2.</strong> Installing VS Code</a></li><li class="chapter-item expanded "><a href="../getting-started/hello-world.html"><strong aria-hidden="true">1.3.</strong> Hello World</a></li></ol></li><li class="chapter-item expanded "><a href="../variables-and-types/index.html"><strong aria-hidden="true">2.</strong> Variables and Simple Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../variables-and-types/variables.html"><strong aria-hidden="true">2.1.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../variables-and-types/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../variables-and-types/numbers.html"><strong aria-hidden="true">2.3.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="../variables-and-types/type-checking.html"><strong aria-hidden="true">2.4.</strong> Type Checking</a></li><li class="chapter-item expanded "><a href="../variables-and-types/comments.html"><strong aria-hidden="true">2.5.</strong> Comments</a></li><li class="chapter-item expanded "><a href="../variables-and-types/exercises.html"><strong aria-hidden="true">2.6.</strong> Exercises</a></li></ol></li><li class="chapter-item expanded "><a href="../lists/index.html"><strong aria-hidden="true">3.</strong> Lists</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lists/creating-lists.html"><strong aria-hidden="true">3.1.</strong> Creating Lists</a></li><li class="chapter-item expanded "><a href="../lists/accessing-elements.html"><strong aria-hidden="true">3.2.</strong> Accessing Elements</a></li><li class="chapter-item expanded "><a href="../lists/modifying-lists.html"><strong aria-hidden="true">3.3.</strong> Modifying Lists</a></li><li class="chapter-item expanded "><a href="../lists/del.html"><strong aria-hidden="true">3.4.</strong> del Operator</a></li><li class="chapter-item expanded "><a href="../lists/length.html"><strong aria-hidden="true">3.5.</strong> Length</a></li><li class="chapter-item expanded "><a href="../lists/sorting.html"><strong aria-hidden="true">3.6.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="../lists/reverse.html"><strong aria-hidden="true">3.7.</strong> Reverse Order</a></li></ol></li><li class="chapter-item expanded "><a href="../if/index.html"><strong aria-hidden="true">4.</strong> If Statement</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../if/example.html"><strong aria-hidden="true">4.1.</strong> An Example</a></li><li class="chapter-item expanded "><a href="../if/conditional-tests.html"><strong aria-hidden="true">4.2.</strong> Conditional Tests</a></li><li class="chapter-item expanded "><a href="../if/if-statement.html"><strong aria-hidden="true">4.3.</strong> If Statement</a></li><li class="chapter-item expanded "><a href="../if/complex-conditions.html"><strong aria-hidden="true">4.4.</strong> Complex Conditions</a></li><li class="chapter-item expanded "><a href="../if/list-conditionals.html"><strong aria-hidden="true">4.5.</strong> List conditionals</a></li><li class="chapter-item expanded "><a href="../if/negation.html"><strong aria-hidden="true">4.6.</strong> Negation</a></li></ol></li><li class="chapter-item expanded "><a href="../loops/index.html"><strong aria-hidden="true">5.</strong> Loops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../loops/for-loop.html"><strong aria-hidden="true">5.1.</strong> For Loop</a></li><li class="chapter-item expanded "><a href="../loops/range.html"><strong aria-hidden="true">5.2.</strong> Range Loop</a></li><li class="chapter-item expanded "><a href="../loops/stats.html"><strong aria-hidden="true">5.3.</strong> Stats</a></li><li class="chapter-item expanded "><a href="../loops/comprehensions.html"><strong aria-hidden="true">5.4.</strong> Comprehensions</a></li><li class="chapter-item expanded "><a href="../loops/while-loop.html"><strong aria-hidden="true">5.5.</strong> While Loop</a></li></ol></li><li class="chapter-item expanded "><a href="../collections/index.html"><strong aria-hidden="true">6.</strong> Collections</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../collections/tuples.html"><strong aria-hidden="true">6.1.</strong> Tuples</a></li><li class="chapter-item expanded "><a href="../collections/dictionaries.html"><strong aria-hidden="true">6.2.</strong> Dictionaries</a></li><li class="chapter-item expanded "><a href="../collections/sets.html" class="active"><strong aria-hidden="true">6.3.</strong> Sets</a></li><li class="chapter-item expanded "><a href="../collections/comprehensions.html"><strong aria-hidden="true">6.4.</strong> Comprensions</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Functions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Classes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Exceptions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> I/O</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Introduction to Python</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sets"><a class="header" href="#sets">Sets</a></h1>
+<p>Sets are much like lists, but they can only contain unique values.
+Also, sets are unordered, so you cannot access them by index.</p>
+<h2 id="creating-a-set"><a class="header" href="#creating-a-set">Creating a set</a></h2>
+<p>To create a set you can use the <code>{}</code> syntax.</p>
+<pre><code class="language-python">fruits = {&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;}
+</code></pre>
+<p>Another way would be to use the <code>set()</code> function. When using the <code>set()</code> function, you can pass in an iterable, like a list, as an argument.</p>
+<pre><code class="language-python">fruits_from_list = set([&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;])
+</code></pre>
+<p>In both examples we will get the same result:</p>
+<pre><code class="language-python">print(fruits == fruits_from_list)
+# =&gt; True
+</code></pre>
+<p>The <code>set</code> function can also be used to create an empty set:</p>
+<pre><code class="language-python">empty_set = set()
+print(len(empty_set))
+# =&gt; 0
+</code></pre>
+<p>We canno use the <code>{}</code> syntax to create an empty set, because it would create an empty dictionary instead.</p>
+<h2 id="accessing-set-items"><a class="header" href="#accessing-set-items">Accessing set items</a></h2>
+<p>We cannot access set items by index, because sets are unordered.</p>
+<p>But we can loop over the set and print each item:</p>
+<pre><code class="language-python">for fruit in fruits:
+    print(fruit)
+</code></pre>
+<p>which produces (not necessarily in this order):</p>
+<pre><code class="language-text">0
+apple
+banana
+</code></pre>
+<p>We can also test if an item is in a set:</p>
+<pre><code class="language-python">print(&quot;banana&quot; in fruits)
+# =&gt; True
+
+print(&quot;pineapple&quot; in fruits)
+# =&gt; False
+</code></pre>
+<h2 id="add-items-to-a-set"><a class="header" href="#add-items-to-a-set">Add items to a set</a></h2>
+<p>To add items to a set, we can use the <code>add()</code> method:</p>
+<pre><code class="language-python">fruits.add(&quot;pineapple&quot;)
+# =&gt; {&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;pineapple&quot;}
+
+print(&quot;pineapple&quot; in fruits)
+# =&gt; True
+</code></pre>
+<p>Another way would be to use the <code>update()</code> method, which takes an iterable as an argument:</p>
+<pre><code class="language-python">fruits.update([&quot;orange&quot;, &quot;mango&quot;, &quot;grapes&quot;])
+# =&gt; {&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;pineapple&quot;, &quot;orange&quot;, &quot;mango&quot;, &quot;grapes&quot;}
+</code></pre>
+<h2 id="remove-items-from-a-set"><a class="header" href="#remove-items-from-a-set">Remove items from a set</a></h2>
+<p>You can use the <code>remove()</code> method to remove an item from a set:</p>
+<pre><code class="language-python">fruits.remove(&quot;banana&quot;)
+# =&gt; {&quot;apple&quot;, &quot;cherry&quot;, &quot;pineapple&quot;, &quot;orange&quot;, &quot;mango&quot;, &quot;grapes&quot;}
+</code></pre>
+<p>If you need to remove any item from a set, you can use the <code>pop()</code> method:</p>
+<pre><code class="language-python">fruit = fruits.pop()
+print(fruit)
+# =&gt; &quot;pineapple&quot; or any other element
+</code></pre>
+<h2 id="set-operations"><a class="header" href="#set-operations">Set operations</a></h2>
+<p>Sets have a lot of useful methods to perform set operations.</p>
+<h3 id="union"><a class="header" href="#union">Union</a></h3>
+<p>To get the union of two sets, you can use the <code>union()</code> method:</p>
+<pre><code class="language-python">{1, 2, 3}.union({3, 4, 5})
+# =&gt; {1, 2, 3, 4, 5}
+</code></pre>
+<p>Or, alternatively, you can use the <code>|</code> operator:</p>
+<pre><code class="language-python">{1, 2, 3} | {3, 4, 5}
+# =&gt; {1, 2, 3, 4, 5}
+</code></pre>
+<h3 id="intersection"><a class="header" href="#intersection">Intersection</a></h3>
+<p>To get the intersection of two sets, you can use the <code>intersection()</code> method:</p>
+<pre><code class="language-python">{1, 2, 3}.intersection({3, 4, 5})
+# =&gt; {3}
+</code></pre>
+<p>Or, alternatively, you can use the <code>&amp;</code> operator:</p>
+<pre><code class="language-python">{1, 2, 3} &amp; {3, 4, 5}
+# =&gt; {3}
+</code></pre>
+<p>Related to intersection are the <code>isdisjoint()</code> and <code>issubset()</code> methods. For example,</p>
+<pre><code class="language-python">{1, 2, 3}.isdisjoint({10, 11, 12})
+# =&gt; True (because there are no common elements)
+
+{1, 2, 3}.isdisjoint({3, 4, 5})
+# =&gt; False (because 3 is in both sets)
+</code></pre>
+<pre><code class="language-python">{1, 2, 3}.issubset({3, 4, 5})
+# =&gt; False (because not all elements of the first set are in the second set)
+
+{1, 2, 3}.issubset({1, 2, 3, 4, 5})
+# =&gt; True (because all elements of the first set are in the second set)
+</code></pre>
+<h3 id="difference"><a class="header" href="#difference">Difference</a></h3>
+<p>You can get difference of two sets using the <code>difference()</code> method:</p>
+<pre><code class="language-python">{1, 2, 3}.difference({3, 4, 5})
+# =&gt; {1, 2}
+</code></pre>
+<p>Note that the operation is not commutative:</p>
+<pre><code class="language-python">{3, 4, 5}.difference({1, 2, 3})
+# =&gt; {4, 5}
+</code></pre>
+<p>Alternatively, you can use the <code>-</code> operator:</p>
+<pre><code class="language-python">{1, 2, 3} - {3, 4, 5}
+# =&gt; {1, 2}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../collections/dictionaries.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../collections/comprehensions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../collections/dictionaries.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../collections/comprehensions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
