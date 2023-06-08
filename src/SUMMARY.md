@@ -23,6 +23,7 @@
   - [Length](./lists/length.md)
   - [Sorting](./lists/sorting.md)
   - [Reverse Order](./lists/reverse.md)
+  - [Exercises](./lists/exercises.md)
 
 - [If Statement](./if/README.md)
   - [An Example](./if/example.md)
@@ -31,6 +32,7 @@
   - [Complex Conditions](./if/complex-conditions.md)
   - [List conditionals](./if/list-conditionals.md)
   - [Negation](./if/negation.md)
+  - [Exercises](./if/exercises.md)
 
 - [Loops](./loops/README.md)
   - [For Loop](./loops/for-loop.md)
@@ -38,12 +40,14 @@
   - [Stats](./loops/stats.md)
   - [Comprehensions](./loops/comprehensions.md)
   - [While Loop](./loops/while-loop.md)
+  - [Exercises](./loops/exercises.md)
 
 - [Collections](./collections/README.md)
   - [Tuples](./collections/tuples.md)
   - [Dictionaries](./collections/dictionaries.md)
   - [Sets](./collections/sets.md)
   - [Comprensions](./collections/comprehensions.md)
+  - [Exercises](./collections/exercises.md)
 
 - [Functions]()
 
