@@ -2,7 +2,7 @@
 
 For all exercises below consider the following list is given to you:
 
-```py
+```python
 fruits = ["apple", "banana", "cherry"]
 ```
 
@@ -18,7 +18,7 @@ Change the value of the second element of the list to `"orange"`. And add `"lemo
 
 Add `"kiwi"` and `"lemon"` to the list, so that the final list looks like this:
 
-```
+```python
 ["kiwi", "apple", "lemon", "banana", "cherry"]
 ```
 
