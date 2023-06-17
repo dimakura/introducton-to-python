@@ -1,6 +1,4 @@
 # Exercises
-<<<<<<< Updated upstream
-=======
 
 ## 1. Squares
 
@@ -25,4 +23,3 @@ Fibonacci sequence is a sequence of numbers where each number is a sum of two pr
 ```
 
 Print first `n` numbers in Fibonacci sequence, where `n` is a number entered by user.
->>>>>>> Stashed changes
