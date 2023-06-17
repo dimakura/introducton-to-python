@@ -1187,7 +1187,12 @@ True
 </code></pre>
 <p>This operator is very useful in certain contexts.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercises-2"><a class="header" href="#exercises-2">Exercises</a></h1>
-<p>TODO</p>
+<h2 id="1-student-scores"><a class="header" href="#1-student-scores">1. Student scores</a></h2>
+<p>Ask a student for their name and their score. Print out their name and their score. If their score is greater than 85, print out &quot;Distinction&quot;. If their score is between 65 and 85, print out &quot;Pass&quot;. Otherwise, print out &quot;Fail&quot;.</p>
+<h2 id="2-list-conditionals"><a class="header" href="#2-list-conditionals">2. List conditionals</a></h2>
+<p>Create an empty list called <code>fruits</code>. Ask the user to enter his favourite fruit and add it to the list. Now ask the user to enter his second favorite fruit and add it to the list. If the fruit he enters is already in the list, print &quot;You already picked that fruit!&quot;. When finished entering fruits, print out the list.</p>
+<h2 id="3-fizzbuzz"><a class="header" href="#3-fizzbuzz">3. FizzBuzz</a></h2>
+<p>Ask the user for a number. If the number is a multiple of 3, print &quot;Fizz&quot;. If the number is a multiple of 5, print &quot;Buzz&quot;. If the number is a multiple of both 3 and 5, print &quot;FizzBuzz&quot;. Otherwise, print the number.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="loops"><a class="header" href="#loops">Loops</a></h1>
 <p>Loops are very useful when you need to perform a task over and over again, such as processing a list of items or performing a task for a given number of times.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="for-loop"><a class="header" href="#for-loop">For Loop</a></h1>
@@ -1339,6 +1344,18 @@ while num &lt; 10:
 <pre><code class="language-txt">1 2 3 4 5 6 7 8 9 
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercises-3"><a class="header" href="#exercises-3">Exercises</a></h1>
+<h2 id="1-squares"><a class="header" href="#1-squares">1. Squares</a></h2>
+<p>Ask user to enter five numbers between <code>1</code> and <code>10</code>. If user enters number outside of that range, print message &quot;Number is not in range&quot;. When user enters all five numbers, print squares of all numbers.</p>
+<h2 id="2-sum-of-numbers"><a class="header" href="#2-sum-of-numbers">2. Sum of numbers</a></h2>
+<p>Create a list of numbers by asking user to enter numbers. When user enters <code>&quot;stop&quot;</code>, stop asking for numbers. Print sum of all numbers in the list. Don't use <code>sum()</code> function.</p>
+<h2 id="3-factorial"><a class="header" href="#3-factorial">3. Factorial</a></h2>
+<p>Ask user to enter a number. Print factorial of that number. If user enters number less than <code>0</code>, print message &quot;Number is not in range&quot;.</p>
+<p><em>Note</em>: factorial of <code>0</code> is <code>1</code>.</p>
+<h2 id="4-fibonacci"><a class="header" href="#4-fibonacci">4. Fibonacci</a></h2>
+<p>Fibonacci sequence is a sequence of numbers where each number is a sum of two previous numbers. First two numbers are <code>0</code> and <code>1</code>. For example, first ten numbers in Fibonacci sequence are:</p>
+<pre><code class="language-python">0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+</code></pre>
+<p>Print first <code>n</code> numbers in Fibonacci sequence, where <code>n</code> is a number entered by user.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="collections"><a class="header" href="#collections">Collections</a></h1>
 <p>We already saw lists, which are a collection of elements. In this chapter we will see other collections: <a href="collections/./tuples.html">tuples</a>, <a href="collections/./dictionaries.html">dictionaries</a> and <a href="collections/./sets.html">sets</a>. We will also see how to create collections using <a href="collections/./comprehensions.html">comprehensions</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tuples"><a class="header" href="#tuples">Tuples</a></h1>
@@ -1630,7 +1647,19 @@ Comprehensions can also be used to create tuples, dictionaries, and sets.</p>
 (1, 4, 9, 16, 25)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercises-4"><a class="header" href="#exercises-4">Exercises</a></h1>
-<p>TODO</p>
+<h2 id="1-student-grades"><a class="header" href="#1-student-grades">1. Student grades</a></h2>
+<p>Create an empty dictionary <code>grades</code>. Ask user to enter name of a student and his grade. Add student name and grade to the <code>grades</code> dictionary as a key-value pair.</p>
+<p>Ask user if he wants to enter another student. If he enters <code>&quot;yes&quot;</code>, repeat the process, otherwise print the <code>grades</code> dictionary and exit the program.</p>
+<p>If user enters grade less than <code>1</code> or greater than <code>5</code>, print message &quot;Grade is not in range&quot;.</p>
+<p>If user enters name of a student that already exists in the list, print message &quot;Student already exists&quot;. Give an option to the user to overwrite existing grade or to enter new name.</p>
+<h2 id="2-student-grades-2"><a class="header" href="#2-student-grades-2">2. Student grades 2</a></h2>
+<p>Rewrite program from the previous exercise but use a list instead of a dictionary. Put student name and grade in a tuple and append it to the list.</p>
+<h2 id="3-job-match"><a class="header" href="#3-job-match">3. Job match</a></h2>
+<p>We have a list of requiements for a job:</p>
+<pre><code class="language-python">requirements = [&quot;Python&quot;, &quot;C++&quot;, &quot;Math&quot;]
+</code></pre>
+<p>Allow user to enter his skills into another list.</p>
+<p>Now compare list of skills which user has to the list of requirements. Print message &quot;You are hired&quot; if user has at lease two matching skills, otherwise print message &quot;Sorry, you are not hired&quot;.</p>
 
                     </main>
 
