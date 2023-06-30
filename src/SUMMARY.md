@@ -46,7 +46,7 @@
   - [Tuples](./collections/tuples.md)
   - [Dictionaries](./collections/dictionaries.md)
   - [Sets](./collections/sets.md)
-  - [Comprensions](./collections/comprehensions.md)
+  - [Comprehensions](./collections/comprehensions.md)
   - [Exercises](./collections/exercises.md)
 
 - [Functions]()

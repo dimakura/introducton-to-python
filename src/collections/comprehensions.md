@@ -1,4 +1,4 @@
-# Comprensions
+# Comprehensions
 
 In previous chapter we have seen how to use [list comprehension](../loops/comprehensions.md) to create lists.
 Comprehensions can also be used to create tuples, dictionaries, and sets.
